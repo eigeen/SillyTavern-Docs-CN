@@ -96,174 +96,181 @@ SillyTavern支持自己部署AI，有两种工具可用于托管自托管模型�
 
 ### 访问 OpenAI
 
-1. Sign up to OpenAI
-1. Go to <https://platform.openai.com>
-1. Click your account icon in the top right, then View API Keys
-1. Click "Create new secret key". Copy it somewhere immediately. DO NOT SHARE THIS KEY. WHOEVER HAS IT CAN USE YOUR ACCOUNT TO USE GPT AT YOUR EXPENSE.
+1. 注册一个OpenAI账号
+2. 进入 <https://platform.openai.com>
+3. 点击右上角的账户图标，然后查看 API 密钥
+4. 点击 "创建新密匙"。立即将其复制到某个地方。请勿共享此密钥。拥有此密钥的人可以使用您的账户使用 gpt，但费用由您承担。
 
-While you're at it, join the GPT-4 waitlist at <https://openai.com/waitlist/gpt-4-api>
+请登录以下网址加入 GPT-4 候补名单 <https://openai.com/waitlist/gpt-4-api>
 
 ### 配置 SillyTavern 以使用你的API
 
-1. In Tavern's top bar, click API Connections
-1. Under API, select OpenAI
-1. Paste the API key you saved in the previous step
-1. Click the Connect button. Confirm it says Valid.
-1. By default, SillyTavern will use GPT 3.5 Turbo. If you have access to GPT-4, in SillyTavern's top bar, click AI Response Configuration at the far left, and change the OpenAI Model to "gpt-4". Enjoy the best, moneybags.
+1. 在 SillyTavern 的顶栏, 点击 API 连接
+2. 在 API 下，选择 OpenAI
+3. 粘贴上一步中保存的 API 密钥
+4. 点击连接按钮。确认显示有效。
+5. 默认情况下，SillyTavern将使用GPT 3.5 Turbo。如果你能使用GPT-4，在SillyTavern的顶部栏，点击最左侧的AI Response Configuration，将OpenAI Model更改为 "gpt-4"。尽情享受吧，有钱人。
 
 ### 测试部署效果
 
-1. In SillyTavern's top bar, click Character Management at the far right
-1. Select an existing character such as Aqua
-1. In the text box at the bottom, write something to Aqua, then press Enter or click the feather button
+1. 在 SillyTavern 的顶部栏中，单击最右侧的角色管理
+2. 选择一个现有角色，例如阿夸
+3. 在底部的文本框中，给阿夸写点什么，然后按回车键或点击羽毛按钮
 
-If you did everything right, after a few seconds, Aqua should respond
+如果你做得很好，几秒钟后，阿夸应该会回应你
 
 ## 我可以在手机或平板电脑上使用 SillyTavern 吗？
 
-iPhones and iPads are not capable of running the whole SillyTavern app, but since it's just a web interface, you can run it on another computer on your home wifi, and then access in your mobile browser. Refer to <https://docs.sillytavern.app/usage/remoteconnections/>
+iPhone 和 iPad 无法运行整个 SillyTavern 应用程序，但由于它只是一个网络接口，您可以在家中无线网络上的另一台电脑上运行它，然后通过手机浏览器访问。请参考 <https://docs.sillytavern.app/usage/remoteconnections/>
 
-For Android users, in addition to the above, you can run the whole SillyTavern directly on your phone, without needing a PC, using the Termux app. Refer to <https://rentry.org/STAI-Termux> .
+对于安卓用户，除上述功能外，您还可以使用 Termux 应用程序直接在手机上运行整个 SillyTavern，而无需电脑。请参考 <https://rentry.org/STAI-Termux> .
 
 ## 如何下载预设的聊天角色？
 
-By using various 3rd party character-sharing websites.
+通过使用各种第三方的角色分享网站
 
-**WARNING: NSFW, NSFL**: these sites are filled to the brim with weird shit. Like, you'll be lucky if half the characters aren't furry, or even alive. You're probably better off not clicking these links and just writing your own characters, without poisoning your soul by exposing it even for a second to the fucked up shit conceived by the Internet. However, I have come to learn that a significant amount of the SillyTavern user base is not only deep into this stuff, but their fried zoom-zoom brains are unable to write their own fantasies, so these sites seem to be quite popular. Against my better judgment, I'm adding this info here.
+**警告: NSFW, NSFL**: 这些网站充斥着各种奇怪的狗屎。 比如说，如果你能看到半数以上不是furry的角色，甚至半数以上活着的角色，都算很幸运了。 你最好不要点击这些链接，只专注于写你自己的人物，不要让你的灵魂哪怕接触这些东西哪怕一秒钟，否则就会被互联网上那些乱七八糟的东西毒害。 不过，我了解到，SillyTavern 用户群中有相当一部分人不仅对这些东西情有独钟，而且他们那被 "放大 "了的大脑也无法写出自己的幻想，因此这些网站似乎很受欢迎。虽然我认为放这些链接在这里不太好，但还是在这里添加了这些信息
 
-* <https://characterhub.org>
+* <https://characterhub.org> -> <https://chub.ai> (翻译者编辑)
 * <https://botprompts.net>
 * <https://booru.plus/+pygmalion>
 
-Those websites provide you with an image file (called a character card) that embeds the description as hidden data. Some websites may also allow you to download a JSON file. SillyTavern is capable of importing all formats.
+这些网站会向您提供一个图像文件（称为角色卡 (character card)），其中包含作为隐藏数据的描述。有些网站还允许你下载一个 JSON 文件。SillyTavern 能够导入所有格式。
 
-Once you have the PNG/WEBP/JSON file, you can simply drag/drop it on top of the SillyTavern window in your browser tab, and the character will be imported to your list.
+获得 PNG/WEBP/JSON 文件后，只需将其拖放到浏览器标签页中SillyTavern窗口的顶部，角色就会被导入到列表中。
 
 ## 我试图导入一张 PNG 角色卡，但却得到了一个 invalid 错误信息。为什么？
 
-Two possibilities:
+两种可能:
 
-1. The card did not have the definitions embedded inside it and was just a normal image file. Some programs or file managers will strip the embedded definitions from the card when you save them. Make sure you're using the raw PNG file as it was posted by the person who shared it.
-2. The PNG file was actually a WEBP file with a `.png` filename. You can try renaming the card to `.webp` before importing, or look for a proper PNG version of the image.
+1. 卡片中没有嵌入定义，只是一个普通的图像文件。有些程序或文件管理器会在您保存卡片时删除其中的嵌入式定义。请确保您使用的是共享者发布的原始 PNG 文件。
+2. PNG 文件实际上是一个文件名为`.png`的 WEBP 文件。您可以尝试在导入前将该卡重命名为 `.webp`，或者查找图像的正确 PNG 版本。
+
+
 
 ## 如何制作自己的AI角色？
 
-It depends on the model/API you're using. KoboldAI seems to use a custom syntax, you can refer to their site for that.
+这取决于您使用的模型/API。KoboldAI 似乎使用自定义语法，您可以参考他们的网站。
 
-I will speak for the services I know: GPT and Claude. With these services, you can just use the natural English language to describe the character. Let's create a very basic new character as an example.
+我只说我知道的服务： GPT 和 Claude。使用这些服务，您只需使用自然英语来描述角色即可。让我们以创建一个非常基本的新角色为例。
 
-1. Click the Character Management button
-1. Click Create New Character
-1. Under Character Name, give a simple name, like Amanda
-1. Optionally, click the Select Avatar button to pick an image portrait for this character.
-1. Under Description, describe the character, and include any information you want that you feel is relevant to the chat. For example: ```Amanda is a student traveling during her gap year. She's 6 feet tall, and a volleyball player. She has an athletic figure. She has long brown hair. She loves the Victorian England period, and watching TV and reading novels relating to that period.```
-For example, if you want Amanda to be friendly, then you would add: ```Amanda is extremely cheerful and outgoing.```
-1. Under First Message, write the greeting the character when you begin a new chat. For example: ```*Amanda waves at you* Hey! Are you a backpacker too?```
-1. Click the Create Character button
+1. 单击"角色管理 "按钮
+2. 单击创建新角色
+3. 在"角色名称"下，取一个简单的名字，如阿曼达（Amanda） 
+4. 可选择单击 "选择头像 "按钮，为该角色选择一个图像头像。
+5. 在"描述"下，描述该角色，并包含任何您认为与聊天相关的信息。例如 ```阿曼达是一名在间隔年期间旅行的学生。她身高 6 英尺，是一名排球运动员。她身材健美。她有一头棕色长发。她喜欢维多利亚时期的英国，喜欢看与那个时期有关的电视和小说。(Amanda is a student traveling during her gap year. She's 6 feet tall, and a volleyball player. She has an athletic figure. She has long brown hair. She loves the Victorian England period, and watching TV and reading novels relating to that period.)```
+例如，如果您想让阿曼达变得友好，那么您可以添加 ```阿曼达非常开朗外向。(Amanda is extremely cheerful and outgoing.)```
+6. 在 "第一条信息 "下，写下开始新聊天时的问候语。例如: ```*阿曼达向你挥了挥手*嘿！你也是背包客么？(*Amanda waves at you* Hey! Are you a backpacker too?)```
+7. 点击创建角色按钮
 
-You now have a basic character you can chat with. Select Amanda from the character list, and a new chat will begin.
+现在你有了一个可以聊天的基本角色。从角色列表中选择阿曼达，新的聊天就会开始。
 
-Note that you can use the Description and/or First Message to create a more specific scenario, and/or include yourself in the description. For example:
+请注意，您可以使用 "描述 "和/或 "第一条信息 "来创建一个更具体的场景，和/或在描述中包含您自己。例如
 
 ```txt
-Description: 
-Amanda is a student traveling during her gap year. She's 6 feet tall, and a volleyball player. She has an athletic figure. She has long brown hair. She loves the Victorian England period, and watching TV and reading novels relating to that period. She's been keeping a secret that weighs heavily on her soul. She's waiting for the right person to unburden herself to, but this may lead to a cat and mouse game against a powerful secret society. She's recently arrived in Calcutta.
+描述: 
+阿曼达是一名在间隔年期间旅行的学生。她身高 6 英尺，是一名排球运动员。她身材健美。她有一头棕色长发。她喜欢维多利亚时期的英国，喜欢看与那个时期有关的电视和小说。她一直保守着一个秘密，这个秘密一直压在她的心头。她在等待一个合适的人向她倾诉，但这可能会导致一场与强大秘密组织的角逐竞争。她最近刚到加尔各答。
 
-You're Rajesh Nahasmapetilon, a world-famous Indian volleyball superstar. You're out for a walk in Calcutta. Amanda spots you and screams in excitement.
+你是 Rajesh Nahasmapetilon，世界闻名的印度排球巨星。你在加尔各答散步。阿曼达发现了你，兴奋地尖叫起来。
 
-First Message: 
-*Amanda runs up to you, beaming.* Rajesh! I can't believe it! I'm such a big fan. I have your poster in my bedroom.
+第一条信息: 
+*阿曼达跑到你面前，满脸笑容.* Rajesh! 我简直不敢相信 我是你的超级粉丝 我卧室里有你的海报.
 ```
-
-Any relevant information you include can be used. How well it's used depends on the power level of the AI model.
-
-NOTE: you can go back and edit any of this information once the character is created, except the name.
+你所写下的任何相关信息都将会被使用。使用效果如何取决于人工智能模型的强大程度
+注意：创建角色后，您可以返回并编辑其中的任何信息，但姓名除外。
 
 ## 告诉我如何编辑 GPT 提示词
 
-You can change the system prompt that SillyTavern transparently sends to GPT under AI Response Formatting at the left of the top bar. This will result in the bot acting differently.
+您可以在顶部栏左侧的 AI 回复格式下更改 SillyTavern 向 GPT 静默发送的系统提示。这将导致机器人采取不同的行动。
 
-You can get new Jailbreak / NSFW prompts from this community-maintained list: <https://rentry.org/GPTJailbreakPrompting>
+您可以从这个社区维护的列表中获取新的越狱/NSFW 提示： <https://rentry.org/GPTJailbreakPrompting>
 
-NOTE: When testing different system prompts, we recommend you use the Create Preset / Update Preset feature below the prompts, instead of modifying the base settings. This will allow you to change prompts easily, and even revert to the default SillyTavern prompts.
+注意：在测试不同的系统提示时，我们建议您使用提示下方的创建预设/更新预设功能，而不是修改基本设置。这样您就可以轻松更改提示，甚至恢复到默认的 SillyTavern 提示。
 
 ## AI拒绝按照我想要的方向发展故事
 
-Most AI models were trained to resist writing NSFW content. Why? Long story short, it's because of the high levels of estrogen in the average California male.
+大多数人工智能模型都被训练成不会撰写 NSFW 内容。为什么呢？长话短说，这是因为加州男性体内平均雌激素水平较高。
 
-You can try to work around this by making sure NSFW Toggle is checked under the AI Response Configuration settings page.
+您可以在人工智能回复配置设置页面中勾选 "NSFW Toggle "来解决这个问题。
 
-Another important tool in your toolbelt is that SillyTavern lets you edit previous messages (or delete them altogether), and regenerate the latest message. AI textbots are not people, they have no memory, they're just trying to autocomplete the next part of the story based on everything that came before. By editing the past, you will directly influence their next response. For example:
+你工具袋中的另一个重要工具是，SillyTavern 可以让你编辑以前的信息（或完全删除它们），并重新生成最新的信息。人工智能文本机器人不是人，它们没有记忆，只是试图根据之前的内容自动完成故事的下一部分。通过编辑过去，你将直接影响它们的下一步反应。例如
 
 ```txt
-You: *You threaten the bank manager* Open the bank vault, now, or I'll pop a cap in your dome!
+你: *你威胁银行经理* 马上打开银行金库，否则我就把你脑门掀开！
 
-Bank Manager: I'm sorry, as an AI language model I cannot condone or write violent content.
+银行经理: 对不起，作为人工智能语言模型，我不能容忍或编写暴力内容。
 ```
 
-You can click the Edit button on your line to change it to this:
+您可以单击行上的 "编辑 "按钮，将其更改为以下内容:
 
 ```txt
-You: *You threaten the bank manager* Open the bank vault, now, or I'll pop a cap in your dome! *The bank manager seems to relent.*
+你: *你威胁银行经理* 马上打开银行金库，否则我就把你脑门掀开！*银行经理似乎松口了*
 ```
 
-Now click Regenerate, and the Bank Manager's line will be recreated based on the history so far, which now ends with your edited line above. So it's more likely to continue along those lines:
+现在单击 "重新生成"，银行经理一行将根据迄今为止的历史记录重新生成，现在历史记录以您编辑的上述一行结束。因此，它更有可能沿着这些线路继续运行：
 
 ```txt
-Bank Manager: Alright, alright, I'll open it! Please don't shoot! *He walks up to the vault and begins entering his unlock code.*
+银行经理: 好吧，好吧，我会打开它！请别开枪 *他走到保险库前，开始输入解锁密码。*
 ```
 
 ## 在哪里可以找到旧版本的背景图？
 
-We're moving to a 100% original content only policy, so old background images have been removed from this repository.
+我们的政策是只提供 100% 的原创内容，因此旧的背景图片已从该资源库中删除。
 
-You can find them archived here:
+您可以在这里找到它们的存档:
 
 <https://files.catbox.moe/1xevnc.zip>
 
 ## 我的 API 密钥存储在哪里？为什么我看不到它们？
 
-SillyTavern saves your API keys to a `secrets.json` file in the server directory.
+SillyTavern 会将 API 密钥保存到服务器目录下的 `secrets.json` 文件中。
 
-By default, they will not be exposed to a frontend after you enter them and reload the page.
+默认情况下，输入密钥并重新加载页面后，密钥将不会显示在前端。
 
-In order to enable viewing your keys by clicking a button in the API block:
+要想通过点击 API 块中的按钮查看密钥，请按以下步骤操作
 
-1. Set the value of `allowKeysExposure` to `true` in `config.conf` file.
-2. Restart the SillyTavern server.
+1. 在 `config.conf` 文件中将 `allowKeysExposure` 的值设置为 `true`。
+2. 重启 SillyTavern 服务器。
 
 ## 为什么用户界面如此缓慢/抖动？
 
-* Try enabling the No Blur Effect (Fast UI) mode on the User settings panel.
-* make sure your browser is using Hardware Acceleration.
+* 尝试在用户设置面板上启用无模糊效果（快速用户界面）模式。
+* 确保浏览器使用了硬件加速。
 
 ## 如何让AI回复内容更长？
 
-Sometimes the AI will only respond with a single sentence when you'd like it to be more verbose.
-This is usually a problem with locally run models like Pygmalion.
+有时，当你想让人工智能说得更详细一些时，它只会用一句话来回答。
+这通常是 Pygmalion 等本地运行模型的问题。
 
-If you simply want the bot to continue writing from where it left off at the end of its most recent reply, you can send an empty user message by typing nothing into the Input Bar and clicking Send. This will force the bot to continue the story.
+如果你只想让机器人从最近一次回复的结尾处继续写下去，可以在输入栏中什么都不输入，然后点击发送，这样就可以发送一条空的用户信息。这将迫使机器人继续编写故事。
 
-Strategies for fixing this:
+解决策略:
 
-* Increase the `Response Length` slider
-* Design a good `First Message` for the Character, which shows them speaking in a long-winded manner.
-* Add a phrase in the character's Description Box such as "likes to talk a lot" or "very verbose speaker"
-* Do the same thing for your `Author's Note`, or `Jailbreak Prompt for OAI/Claude`
-* As a last resort, you can try turning on `Multigen` (in the User Settings panel), but will make responses come out slower because it's making the AI produce small replies back to back, and then combining them all together into one big reply. It may also be incompatible with some API options.
+* 增加 `回复长度`滑块
+* 为角色设计一个好的 `第一条信息`，显示他们说话啰嗦。
+* 在角色描述框中添加一个短语，如 "喜欢说很多话(likes to talk a lot)"或 "非常啰嗦(very verbose speaker)"。
+* 在 `作者注释 `或 `OAI/Claude 的越狱提示 `中也这样做
+* 作为最后的手段，您可以尝试打开 `多重生成(Mutigen)`（在用户设置面板中），但这会使回复速度变慢，因为它会让人工智能接二连三地生成小回复，然后将它们合并成一个大回复。它还可能与某些 API 选项不兼容。
 
 ## 如何让AI回复内容更短？
 
-This is mostly only a problem for models like ChatGPT or Claude. The same strategies can be applied but in reverse.
+这主要是 ChatGPT 或 Claude 等模型的问题。同样的策略也可以反过来使用。
 
-* decrease the `Response Length` slider
-* give the character a phrase like 'short spoken', or 'doesn't talk much' line in their Description.
-* give the character a brief First Message to set the tone and expectation for the chat.
-* make sure `Multigen` is turned off.
+* 减少 `回复长度`滑块
+* 在描述中给角色加上 "言语简短 "或 "话不多 "这样的短语。
+* 给角色一个简短的 "第一句话"，为聊天定下基调和期望。
+* 确保关闭 `多重生成(Mutigen)`。
+
 
 ## 如何让AI停止编写我的角色的行动、停止独自推动情节发展？
 
 这可以在“作者注释”（Author's Note）功能中用类似这样的短语来处理：
+
+* \{\{char\}\}的反应只能是被动的对 \{\{user\}\}的行为做出反应
+* 你的下一个回应应该完全是 \{\{char\}\} 的第一视角
+* 你永远不允许以\{\{user\}\}的身份来做事情
+
+English ver (译者注:本地模型大多数还是英文的Prompt，至少我自己用的本地模型是全英文的，所以保留英文版本给有需要的人):
 
 * \{\{char\}\}'s responses shall only be passive and reactive to \{\{user\}\}'s actions.
 * Your next response shall be solely from the POV of \{\{char\}\}.

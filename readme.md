@@ -6,17 +6,17 @@ SillyTavern是一个本地部署的交互界面，让你通过文本生成AI（L
 
 SillyTavern于2023年2月基于TavernAI 1.2.8版本修改而来，此后引入了很多原版TavernAI中不存在的先进功能。
 
-### Screenshots
+### 截图
 
 | ![Chat](https://github.com/SillyTavern/SillyTavern-Docs/assets/18619528/f750387b-b923-4561-85cf-b86b14e39afd) | ![Waifu mode](https://github.com/SillyTavern/SillyTavern-Docs/assets/18619528/a3d0d020-25a1-4c06-9342-972e43b1ad93) |
 |:---:|:---:|
 | ![VN Mode](https://github.com/SillyTavern/SillyTavern-Docs/assets/18619528/772d7c7a-0f41-4138-b155-d86b61bf2cce) | ![Backgrounds](https://github.com/SillyTavern/SillyTavern-Docs/assets/18619528/e3df8fcc-edfe-4a5d-8ac6-9462181aad4c) |
 
-### Branches
+### 分支（Branch）
 
-SillyTavern is being developed using a two-branch system to ensure a smooth experience for all users.
+SillyTavern采用双分支系统来确保给所有用户带来一个丝滑的体验，
 
-* release -🌟 **Recommended for most users.** This is the most stable and recommended branch, updated only when major releases are pushed. It's suitable for the majority of users.
+* 发行版 -🌟 **适用于大部分用户.** 这是我们最稳定也是最推荐的版本, 只有当重大更新发布时才更新。 它适用于大部分用户。
 * staging - ⚠️ **Not recommended for casual use.** This branch has the latest features, but be cautious as it may break at any time. Only for power users and enthusiasts.
 
 Learn more [here](https://docs.sillytavern.app/usage/branches/).
