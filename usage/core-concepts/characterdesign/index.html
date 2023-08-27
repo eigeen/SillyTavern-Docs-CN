@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746461103287">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746464839104">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
 
     <!-- Primary Meta Tags -->
-    <title>Character Design | SillyTavern中文文档</title>
-    <meta name="title" content="Character Design | SillyTavern中文文档">
+    <title>角色设计 | SillyTavern中文文档</title>
+    <meta name="title" content="角色设计 | SillyTavern中文文档">
     <meta name="description" content="Used to add the character description and the rest that the AI should know.">
 
     <!-- Canonical -->
@@ -19,22 +19,22 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.eigeen.cc/usage/core-concepts/characterdesign/">
-    <meta property="og:title" content="Character Design | SillyTavern中文文档">
+    <meta property="og:title" content="角色设计 | SillyTavern中文文档">
     <meta property="og:description" content="Used to add the character description and the rest that the AI should know.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://docs.eigeen.cc/usage/core-concepts/characterdesign/">
-    <meta property="twitter:title" content="Character Design | SillyTavern中文文档">
+    <meta property="twitter:title" content="角色设计 | SillyTavern中文文档">
     <meta property="twitter:description" content="Used to add the character description and the rest that the AI should know.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.2.0.746461103287" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.2.0.746464839104" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746461103287" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746464839104" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746461103287" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746464839104" data-turbo-eval="false" defer></script>
 
     <Style>
         a {
@@ -195,101 +195,104 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="character-design" class="break-words">
+<doc-anchor-target id="角色设计" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#character-design">#</doc-anchor-trigger>
-        <span>Character Design</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#角色设计">#</doc-anchor-trigger>
+        <span>角色设计</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="character-description">
+<doc-anchor-target id="角色描述">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#character-description">#</doc-anchor-trigger>
-        <span>Character Description</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#角色描述">#</doc-anchor-trigger>
+        <span>角色描述</span>
     </h3>
 </doc-anchor-target>
 <p>Used to add the character description and the rest that the AI should know. This will always be present in the prompt, so all the important facts should be included here.</p>
 <p>For example, you can add information about the world in which the action takes place and describe the characteristics of the character you are playing for.</p>
 <p>It could be of any length (be it 200 or 2000 tokens) and formatted in any style (free text, W++, conversation style, etc).</p>
-<doc-anchor-target id="methods-and-format">
+<p>用于添加角色描述和AI需要知道的其他信息。此内容将始终出现在提示词中，因此所有重要的内容都应该在这里交代。</p>
+<p>例如，您可以添加有关事件发生的世界的信息，并描述该角色的特征。</p>
+<p>角色描述的长度不限（无论 200 或 2000 tokens），格式不限（自由文本、W++、对话格式等）。</p>
+<doc-anchor-target id="方法和格式">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#methods-and-format">#</doc-anchor-trigger>
-        <span>Methods and format</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#方法和格式">#</doc-anchor-trigger>
+        <span>方法和格式</span>
     </h3>
 </doc-anchor-target>
-<p>Methods of character formatting is a complicated topic beyond the scope of this documentation page.</p>
-<p>Recommended guides that were tested with or rely on SillyTavern&#x27;s features:</p>
+<p>角色格式化方法是一个复杂的话题，超出了本文档页面的范围。</p>
+<p>推荐阅读以下指南，他们已经在 SillyTavern 上经过了测试，或者被 SillyTavern 所依赖。</p>
 <ul>
 <li>AliCat&#x27;s Ali:Chat guide: <a href="https://rentry.co/alichat">https://rentry.co/alichat</a></li>
 <li>kingbri&#x27;s minimalistic guide: <a href="https://rentry.co/kingbri-chara-guide">https://rentry.co/kingbri-chara-guide</a></li>
 <li>Kuma&#x27;s W++ guide: <a href="https://rentry.co/WPP_For_Dummies">https://rentry.co/WPP_For_Dummies</a></li>
 </ul>
-<doc-anchor-target id="character-tokens">
+<doc-anchor-target id="角色-tokens">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#character-tokens">#</doc-anchor-trigger>
-        <span>Character tokens</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#角色-tokens">#</doc-anchor-trigger>
+        <span>角色 Tokens</span>
     </h3>
 </doc-anchor-target>
-<p><strong>TL;DR: If you&#x27;re working with an AI model with a 2048 context token limit, your 1000 token character definition is cutting the AI&#x27;s &#x27;memory&#x27; in half.</strong></p>
-<p>To put this in perspective, a decent response from a good AI can easily be around 200-300 tokens. In this case, the AI would only be able to &#x27;remember&#x27; about 3 exchanges worth of chat history.</p>
+<p><strong>TL;DR: 假设你使用的AI模型限制上下文最多输入 2048 个 Token，如果你设定的角色设定包含了 1000 个 Token，就相当于将AI的“记忆”削减了一半。</strong></p>
+<p>从这个角度来看，一个表现优秀的AI做出一个像样的回复很容易就会占用 200-300 个 Token。在这种情况下，AI只能“记住”大约 3 次聊天记录。</p>
 <hr>
-<doc-anchor-target id="why-did-my-characters-token-counter-turn-red">
+<doc-anchor-target id="为什么我的角色-token-计数器变成红色了">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#why-did-my-characters-token-counter-turn-red">#</doc-anchor-trigger>
-        <span>Why did my character&#x27;s token counter turn red?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#为什么我的角色-token-计数器变成红色了">#</doc-anchor-trigger>
+        <span>为什么我的角色 Token 计数器变成红色了？</span>
     </h3>
 </doc-anchor-target>
-<p>When we see your character has over half of the model-defined context length of tokens in its definitions, we highlight it for you because this can lower the AI&#x27;s capabilities to provide an enjoyable conversation.</p>
-<doc-anchor-target id="what-happens-if-my-character-has-too-many-tokens">
+<p>当程序发现你的角色设定 Token 长度大于模型定义的上下文长度的一半时，程序就会将计数器标红，因为这会降低AI对话的体验。</p>
+<doc-anchor-target id="如果我的角色-token-过大会怎么样">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#what-happens-if-my-character-has-too-many-tokens">#</doc-anchor-trigger>
-        <span>What happens if my Character has too many tokens?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#如果我的角色-token-过大会怎么样">#</doc-anchor-trigger>
+        <span>如果我的角色 Token 过大会怎么样？</span>
     </h3>
 </doc-anchor-target>
-<p>Don&#x27;t worry - it won&#x27;t break anything. At worst, if the Character&#x27;s permanent tokens are too large, it simply means there will be less room left in the context for other things (see below).</p>
-<p>The only negative side effect this can have is the AI will have less &#x27;memory&#x27;, as it will have less chat history available to process.</p>
-<p>This is because every AI model has a limit to the amount of context it can process at one time.</p>
-<doc-anchor-target id="context">
+<p>首先别慌，这不会造成破坏性问题。在最坏的情况下，如果角色的永久 Token 过大，只是表示上下文中留给其他事情的空间减少了（见下文）。</p>
+<p>这样做唯一的负面影响就是AI的“记忆”会减少，因为它可以处理的聊天记录会减少。</p>
+<p>这是因为每个AI模型一次能处理的上下文数量都是有限的。</p>
+<doc-anchor-target id="上下文context">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#context">#</doc-anchor-trigger>
-        <span>&#x27;Context&#x27;?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#上下文context">#</doc-anchor-trigger>
+        <span>“上下文（Context）”？</span>
     </h3>
 </doc-anchor-target>
-<p>This is the information that gets sent to the AI each time you ask it to generate a response:</p>
+<p>每次要求AI生成回复时，这些信息都会发送给AI：</p>
 <ul>
-<li>Character definitions</li>
-<li>Chat history</li>
-<li>Author&#x27;s Notes</li>
-<li>Special Format strings</li>
-<li>[bracket commands]</li>
+<li>角色设定</li>
+<li>聊天记录</li>
+<li>作者注释</li>
+<li>特殊格式化字符串</li>
+<li>[括号命令]</li>
 </ul>
-<p>SillyTavern automatically calculates the best way to allocate the available context tokens before sending the information to the AI model.</p>
-<doc-anchor-target id="what-are-a-characters-permanent-tokens">
+<p>在向AI模型发送信息之前，SillyTavern 会自动计算分配可用上下文 Tokens 的最佳方式。</p>
+<doc-anchor-target id="角色的永久-token-是什么">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#what-are-a-characters-permanent-tokens">#</doc-anchor-trigger>
-        <span>What are a Character&#x27;s &#x27;Permanent Tokens&#x27;?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#角色的永久-token-是什么">#</doc-anchor-trigger>
+        <span>角色的永久 Token 是什么？</span>
     </h3>
 </doc-anchor-target>
-<p>These will always be sent to the AI with every generation request:</p>
+<p>每次生成请求都会向AI发送这些信息：</p>
 <ul>
-<li>Character Name (keep the name short! Sent at the start of EVERY Character message)</li>
-<li>Character Description Box</li>
-<li>Character Personality Box</li>
-<li>Scenario Box</li>
+<li>角色名称（保持名称简短！它会放在所有角色信息的开头）</li>
+<li>角色描述</li>
+<li>角色性格</li>
+<li>场景</li>
 </ul>
-<doc-anchor-target id="what-parts-of-a-characters-definitions-are-not-permanent">
+<doc-anchor-target id="角色设定的哪些部分不是永久性的">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#what-parts-of-a-characters-definitions-are-not-permanent">#</doc-anchor-trigger>
-        <span>What parts of a Character&#x27;s Definitions are NOT permanent?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#角色设定的哪些部分不是永久性的">#</doc-anchor-trigger>
+        <span>角色设定的哪些部分不是永久性的？</span>
     </h3>
 </doc-anchor-target>
 <ul>
-<li>The first message box - only sent once at the start of the chat.</li>
-<li>Example messages box - only kept until chat history fills up the context (optionally these can be forced to be kept in context)</li>
+<li>第一条消息——只在聊天开始时发送一次。</li>
+<li>对话示例——只保留到聊天历史填满上下文（可选择强制保留在上下文中）</li>
 </ul>
-<doc-anchor-target id="popular-ai-model-context-token-limits">
+<doc-anchor-target id="常用的ai模型上下文词元限制">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#popular-ai-model-context-token-limits">#</doc-anchor-trigger>
-        <span>Popular AI Model Context Token Limits</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#常用的ai模型上下文词元限制">#</doc-anchor-trigger>
+        <span>常用的AI模型上下文词元限制</span>
     </h3>
 </doc-anchor-target>
 <ul>
@@ -301,41 +304,41 @@
 <li>Anthropic&#x27;s Claude - 8000 (older versions) or 100k (Claude 2)</li>
 <li>NovelAI - 8192 (Kayra, Opus tier; Clio, all tiers), 6144 (Kayra, Scroll tier), or 3072 (Kayra, Tablet tier)</li>
 </ul>
-<doc-anchor-target id="personality-summary">
+<doc-anchor-target id="性格总结">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#personality-summary">#</doc-anchor-trigger>
-        <span>Personality summary</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#性格总结">#</doc-anchor-trigger>
+        <span>性格总结</span>
     </h3>
 </doc-anchor-target>
-<p>A brief description of the personality.</p>
-<p>Examples:</p>
+<p>对角色性格的简要描述。</p>
+<p>例子：</p>
 <ul>
 <li><code v-pre>Cheerful, cunning, provocative</code></li>
 <li><code v-pre>Aqua likes to do nothing and also likes to get drunk</code></li>
 </ul>
-<doc-anchor-target id="first-message">
+<doc-anchor-target id="第一条消息">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#first-message">#</doc-anchor-trigger>
-        <span>First message</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#第一条消息">#</doc-anchor-trigger>
+        <span>第一条消息</span>
     </h3>
 </doc-anchor-target>
-<p>The First Message is an important thing that sets exactly how and in what style the character will communicate.</p>
-<p>The character&#x27;s first message should be long so that later it would be less likely that the character would respond with very short messages.</p>
-<p>You can also use asterisks ** to describe the character&#x27;s actions.</p>
-<p>For example:</p>
+<p>第一条信息很重要，它决定角色的交流方式和风格。</p>
+<p>角色的第一条信息应该尽量长，这样之后的聊天就不太可能用很短的信息来回应。</p>
+<p>您还可以使用星号 ** 来描述人物的行为。</p>
+<p>例如：</p>
 <p><code v-pre>*I noticed you came inside, I walked up and stood right in front of you* Welcome. I'm glad to see you here. *I said with a toothy smug sunny smile looking you straight in the eye* What brings you...</code></p>
-<doc-anchor-target id="examples-of-dialogue">
+<doc-anchor-target id="对话示例">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#examples-of-dialogue">#</doc-anchor-trigger>
-        <span>Examples of dialogue</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#对话示例">#</doc-anchor-trigger>
+        <span>对话示例</span>
     </h3>
 </doc-anchor-target>
-<p>Describes how the character speaks. Before each example, you need to add the &lt;START&gt; tag.</p>
+<p>描述角色如何对话。在每一个示例前，你应该加上 &lt;START&gt; 标签。</p>
 <ul>
-<li>Use {{char}} instead of the character name.</li>
-<li>Use {{user}} instead of the user name.</li>
+<li>使用 {{char}} 而不是角色名称。</li>
+<li>使用 {{user}} 而不是用户名称。</li>
 </ul>
-<p>Example:</p>
+<p>例子：</p>
 <p>&lt;START&gt;</p>
 <p>{{user}}: Hi Aqua, I heard you like to spend time in the pub.</p>
 <p>{{char}}: *excitedly* Oh my goodness, yes! I just love spending time at the pub! It&#x27;s so much fun to talk to all the adventurers and hear about their exciting adventures! And you are?</p>
@@ -344,37 +347,37 @@
 <p>&lt;START&gt;</p>
 <p>{{user}}: Hello</p>
 <p>{{char}}: *excitedly* Hello there, dear! Are you new to Axel? Don&#x27;t worry, I, Aqua the goddess of water, am here to help you! Do you need any assistance? And may I say, I look simply radiant today! *strikes a pose and looks at you with puppy eyes*</p>
-<doc-anchor-target id="scenario">
+<doc-anchor-target id="场景">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#scenario">#</doc-anchor-trigger>
-        <span>Scenario</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#场景">#</doc-anchor-trigger>
+        <span>场景</span>
     </h3>
 </doc-anchor-target>
-<p>Circumstances and context of the dialogue.</p>
-<doc-anchor-target id="replacement-tags-macros">
+<p>互动的环境和背景（情况和上下文）。</p>
+<doc-anchor-target id="替换标签宏">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#replacement-tags-macros">#</doc-anchor-trigger>
-        <span>Replacement tags (macros)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#替换标签宏">#</doc-anchor-trigger>
+        <span>替换标签（宏）</span>
     </h3>
 </doc-anchor-target>
-<p><em>A list of tags that are replaced when sending to generate:</em></p>
+<p><em>发送并生成上下文时被替换的标记列表：</em></p>
 <ol>
-<li>{{user}} and &lt;USER&gt; are replaced by the User&#x27;s Name</li>
-<li>{{char}} and &lt;BOT&gt; are replaced by the Character&#x27;s Name</li>
-<li>{{time}} is replaced with the current system time.</li>
-<li>{{time_UTC±X}} is replaced with the current time in the specified UTC offset (timezone). {e.g. {{time_UTC-4}} for the time in UTC-04:00, for UTC+02:00 use {{time_UTC+2}}.</li>
-<li>{{date}} is replaced with the current system date.</li>
-<li>{{idle_duration}} inserts a humanized string of the time range since the last user message was sent (examples: 4 hours, 1 day).</li>
-<li>{{random:(args)}} returns a random item from the list. (e.g. {{random:1,2,3,4}} will return 1 of the 4 numbers at random). Works with text lists too.</li>
-<li>{{roll:(formula)}} generates a random value and returns it using the provided dice formula using D&amp;D dice syntax: XdY+Z. For example, {\roll:d6}} will generate a random value in the 1-6 range (standard six-sided dice).</li>
+<li>{{user}} 和 &lt;USER&gt; 会被替换为用户的名称。</li>
+<li>{{char}} 和 &lt;BOT&gt; 会被替换为角色的名称。</li>
+<li>{{time}} 会被替换为当前的系统时间。</li>
+<li>{{time_UTC±X}} 会被替换为当前的系统时间+指定的UTC时区偏移。 {例如 {{time_UTC-4}} 表示时间 UTC-04:00，要表示 UTC+02:00 可以使用 {{time_UTC+2}}.</li>
+<li>{{date}} 会被替换为当前的系统日期。</li>
+<li>{{idle_duration}} 会被替换为一个易于阅读的字符串，表示自上次发送用户信息以来的时间间隔（例如： 4 hours, 1 day）。</li>
+<li>{{random:(args)}} 从列表中返回一个随机项。（例如 {{random:1,2,3,4}} 将随机返回4个数字中的1个）。此功能也适用于文本列表。</li>
+<li>{{roll:(formula)}} 通过扔骰子来生成一个随机值，采用龙与地下城的骰子语法：XdY+Z。例如，{{roll:d6}} 将生成1-6范围内的随机值（标准六面骰子）。</li>
 </ol>
-<doc-anchor-target id="favorite-character">
+<doc-anchor-target id="添加到收藏夹">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#favorite-character">#</doc-anchor-trigger>
-        <span>Favorite Character</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#添加到收藏夹">#</doc-anchor-trigger>
+        <span>添加到收藏夹</span>
     </h3>
 </doc-anchor-target>
-<p>Mark the character as a favorite to quickly filter on the side menu bar by pressing the &quot;star&quot; button.</p>
+<p>按下“星”形按钮，将角色添加到收藏夹，以便在侧边菜单栏上快速筛选。</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -390,20 +393,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../usage/api-connections/scale/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../usage/core-concepts/authors-note/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Scale</span>
+                                                <span class="block mt-1">作者注释</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../usage/core-concepts/chatfilemanagement/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../usage/core-concepts/advancedformatting/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Chat File Management</span>
+                                                <span class="block mt-1">高级格式设置</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -447,6 +450,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Character Design", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "角色设计", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
