@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746454147913">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746457669791">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
 
     <!-- Primary Meta Tags -->
-    <title>Advanced Formatting | SillyTavern中文文档</title>
-    <meta name="title" content="Advanced Formatting | SillyTavern中文文档">
-    <meta name="description" content="The settings provided in this section allow for more control over the prompt-building strategy.">
+    <title>高级格式设置 | SillyTavern中文文档</title>
+    <meta name="title" content="高级格式设置 | SillyTavern中文文档">
+    <meta name="description" content="通过本节提供的设置，可以对提示词构建策略进行进一步控制。">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.eigeen.cc/usage/core-concepts/advancedformatting/">
@@ -19,22 +19,22 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.eigeen.cc/usage/core-concepts/advancedformatting/">
-    <meta property="og:title" content="Advanced Formatting | SillyTavern中文文档">
-    <meta property="og:description" content="The settings provided in this section allow for more control over the prompt-building strategy.">
+    <meta property="og:title" content="高级格式设置 | SillyTavern中文文档">
+    <meta property="og:description" content="通过本节提供的设置，可以对提示词构建策略进行进一步控制。">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://docs.eigeen.cc/usage/core-concepts/advancedformatting/">
-    <meta property="twitter:title" content="Advanced Formatting | SillyTavern中文文档">
-    <meta property="twitter:description" content="The settings provided in this section allow for more control over the prompt-building strategy.">
+    <meta property="twitter:title" content="高级格式设置 | SillyTavern中文文档">
+    <meta property="twitter:description" content="通过本节提供的设置，可以对提示词构建策略进行进一步控制。">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.2.0.746454147913" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.2.0.746457669791" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746454147913" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746457669791" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746454147913" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746457669791" data-turbo-eval="false" defer></script>
 
     <Style>
         a {
@@ -195,114 +195,114 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="advanced-formatting" class="break-words">
+<doc-anchor-target id="高级格式设置" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#advanced-formatting">#</doc-anchor-trigger>
-        <span>Advanced Formatting</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#高级格式设置">#</doc-anchor-trigger>
+        <span>高级格式设置</span>
     </h1>
 </doc-anchor-target>
-<p>The settings provided in this section allow for more control over the prompt-building strategy.</p>
-<doc-anchor-target id="context-template">
+<p>通过本节提供的设置，可以对提示词构建策略进行进一步控制。</p>
+<doc-anchor-target id="上下文模板">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#context-template">#</doc-anchor-trigger>
-        <span>Context Template</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#上下文模板">#</doc-anchor-trigger>
+        <span>上下文模板</span>
     </h3>
 </doc-anchor-target>
-<p><strong>Most of the settings here do not apply to Chat Completions APIs as they are governed by the prompt manager system instead.</strong></p>
-<p>Usually, AI models require to provide the character data to them in some specific way. SillyTavern includes a list of pre-made conversion rules for different models, but you may customize them however you like.</p>
+<p><strong>这里的大部分设置不适用于对话补全 API，因为它们由提示词管理系统控制。</strong></p>
+<p>通常，AI模型需要以某种特定方式提供角色数据。SillyTavern 包含一份针对不同模型的预设转换规则列表，但你也可以根据自己的喜好进行定制。</p>
 <doc-anchor-target id="story-string">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#story-string">#</doc-anchor-trigger>
         <span>Story string</span>
     </h4>
 </doc-anchor-target>
-<p>This field is a template for pre-chat character data (known internally as a story string).
-This is the main way to format your character card for text completion and instruct models.</p>
-<p>The template supports Handlebars syntax and any custom text injections or formatting. See the language reference here: <a href="https://handlebarsjs.com/guide/">https://handlebarsjs.com/guide/</a></p>
-<p>We provide the following parameters to the Handlebars evaluator (wrap them into double-curly braces):</p>
+<p>此字段是聊天前角色数据（内部称为 story string）的模板。
+这是为文本补全和指示模型而格式化字符卡的主要方式。</p>
+<p>该模板支持 Handlebars 语法和任何自定义文本注入或格式化。请参见此处的语言参考：https://handlebarsjs.com/guide/</p>
+<p>我们为 Handlebars evaluator 提供了以下参数（将它们置于双花括号中）：</p>
 <ol>
-<li><code v-pre>description</code> - character&#x27;s Description</li>
-<li><code v-pre>scenario</code> - character&#x27;s Scenario</li>
-<li><code v-pre>personality</code> - character&#x27;s Personality</li>
-<li><code v-pre>system</code> - [instruct mode] system prompt OR character&#x27;s main prompt override (if exists and &quot;Prefer Char. Prompt&quot; is enabled in User Settings)</li>
-<li><code v-pre>persona</code> - selected persona description</li>
-<li><code v-pre>char</code> - character&#x27;s name</li>
-<li><code v-pre>user</code> - selected persona name</li>
-<li><code v-pre>wiBefore</code> or <code v-pre>loreBefore</code> - combined activated World Info entries with Position set to &quot;Before Char Defs&quot;</li>
-<li><code v-pre>wiAfter</code> or <code v-pre>loreAfter</code> - combined activated World Info entries with Position set to &quot;After Char Defs&quot;</li>
+<li><code v-pre>description</code> - 角色描述</li>
+<li><code v-pre>scenario</code> - 角色背景</li>
+<li><code v-pre>personality</code> - 角色性格</li>
+<li><code v-pre>system</code> - [指示模式] 系统提示词或覆盖角色的主要提示词（如果存在且&quot;Prefer Char. Prompt&quot;在用户设置中启用）</li>
+<li><code v-pre>persona</code> - 选定的用户角色描述 <em>（译者注：即当前选中的代表用户输入的角色）</em></li>
+<li><code v-pre>char</code> - 角色名</li>
+<li><code v-pre>user</code> - 选定的用户角色名</li>
+<li><code v-pre>wiBefore</code> or <code v-pre>loreBefore</code> - 合并后的激活的“世界信息”条目，并且插入位置为“角色设定前”</li>
+<li><code v-pre>wiAfter</code> or <code v-pre>loreAfter</code> - 合并后的激活的“世界信息”条目，并且插入位置为“角色设定后”</li>
 </ol>
-<p><strong>WARNING</strong>: If some of the above parameters are missing from the story string template, they are not going to be sent in the prompt at all.</p>
-<doc-anchor-target id="example-separator">
+<p><strong>警告</strong>: 如果 story string 模板中缺少上述某些参数，则根本不会在提示词中发送这些参数。</p>
+<doc-anchor-target id="对话示例分隔符">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#example-separator">#</doc-anchor-trigger>
-        <span>Example Separator</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#对话示例分隔符">#</doc-anchor-trigger>
+        <span>对话示例分隔符</span>
     </h4>
 </doc-anchor-target>
-<p>Used as a block header and a separator between the example dialogue blocks. Any instance of <code v-pre>&lt;START&gt;</code> tags in the example dialogues will be replaced with the contents of this field.</p>
-<doc-anchor-target id="chat-start">
+<p>用作块标题和示例对话块之间的分隔符。示例对话框中的任何<code v-pre>&lt;START&gt;</code>标记都将用该字段的内容替换。</p>
+<doc-anchor-target id="开始回复">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#chat-start">#</doc-anchor-trigger>
-        <span>Chat Start</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#开始回复">#</doc-anchor-trigger>
+        <span>开始回复</span>
     </h4>
 </doc-anchor-target>
-<p>Inserted as a separator after the rendered story string and after the example dialogues blocks, but before the first message in context.</p>
-<doc-anchor-target id="always-add-characters-name-to-prompt">
+<p>作为分隔符插入在渲染完成的 story string 之后和示例对话块之后，但在上下文中第一条信息之前。</p>
+<doc-anchor-target id="始终在提示词中添加角色名称">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#always-add-characters-name-to-prompt">#</doc-anchor-trigger>
-        <span>Always add character&#x27;s name to prompt</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#始终在提示词中添加角色名称">#</doc-anchor-trigger>
+        <span>始终在提示词中添加角色名称</span>
     </h4>
 </doc-anchor-target>
-<p>Appends the character&#x27;s name to the prompt to force the model to complete the message as the character:</p>
+<p>将角色的名称附加到提示词中，强制模型以角色的身份完成对话：</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">** OTHER CONTEXT HERE **
+<pre class="language-none"><code v-pre class="language-none">** 其他的上下文 **
 Character:</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="tokenizer">
+<doc-anchor-target id="分词器-tokenizer">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#tokenizer">#</doc-anchor-trigger>
-        <span>Tokenizer</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#分词器-tokenizer">#</doc-anchor-trigger>
+        <span>分词器 Tokenizer</span>
     </h3>
 </doc-anchor-target>
-<p>A tokenizer is a tool that breaks down a piece of text into smaller units called tokens. These tokens can be individual words or even parts of words, such as prefixes, suffixes, or punctuation. A rule of thumb is that one token generally corresponds to 3~4 characters of text.</p>
-<p>SillyTavern provides a &quot;Best match&quot; option that tries to match the tokenizer using the following rules depending on the API provider used.</p>
-<p>Text Completion APIs <strong>(overridable)</strong>:</p>
+<p>分词器是一种将一段文本分解成称为 Tokens 的较小单元的工具。这些 Tokens 可以是单个词，甚至是词的一部分，如前缀、后缀或标点符号。根据经验，一个 Token 一般对应 3 到 4 个字符的文本。</p>
+<p>SillyTavern 提供了一个“最佳匹配”选项，它会根据所使用的 API 提供商，使用以下规则尝试匹配分词器。</p>
+<p>文本补全 API <strong>（可覆盖）</strong>：</p>
 <ol>
 <li>NovelAI Krake/Euterpe: GPT-2/3 tokenizer.</li>
 <li>NovelAI Clio: NerdStash tokenizer.</li>
 <li>NovelAI Kayra: NerdStash v2 tokenizer.</li>
 <li>TextGen / KoboldAI / AI Horde: LLaMA tokenizer.</li>
 </ol>
-<p>If you get inaccurate results or wish to experiment, you can set an <em>override tokenizer</em> for SillyTavern to use while forming a request to the AI backend:</p>
+<p>如果你得到的结果不准确或想进行试验，你可以设置一个 <em>override tokenizer</em>，让 SillyTavern 在向AI后端发出请求时使用：</p>
 <ol>
-<li>None. Each token is estimated to be ~3.3 characters, rounded up to the nearest integer. <strong>Try this if your prompts get cut off on high context lengths.</strong> This approach is used by KoboldAI Lite.</li>
-<li>GPT-3 tokenizer. <strong>Used by pre-Turbo OpenAI models (ada, babbage, curie, davinci).</strong> Can be previewed here: <a href="https://platform.openai.com/tokenizer">OpenAI Tokenizer</a>.</li>
-<li>(Legacy) GPT-2/3 tokenizer. Used by original TavernAI. <strong>Pick this if you&#x27;re unsure.</strong> More info: <a href="https://github.com/josephrocca/gpt-2-3-tokenizer">gpt-2-3-tokenizer</a>.</li>
-<li>LLaMA tokenizer. Used by LLaMA 1/2 models family: Vicuna, Hermes, Airoboros, etc. <strong>Pick if you use a LLaMA 1/2 model.</strong></li>
-<li>NerdStash tokenizer. Used by NovelAI&#x27;s Clio model. <strong>Pick if you use the Clio model.</strong></li>
-<li>NerdStash v2 tokenizer. Used by NovelAI&#x27;s Kayra model. <strong>Pick if you use the Kayra model.</strong></li>
-<li>API tokenizer. Queries the generation API to get the token count directly from the model. Only supported by Oobabooga&#x27;s TextGen. <strong>Pick if you use the latest version of TextGen API.</strong></li>
+<li>None。每个 Token 估计约为 3.3 个字符，四舍五入到最接近的整数。<strong>如果你的提示词在上下文过长时被截断，请试试这个。</strong> KoboldAI Lite 采用的就是这种。</li>
+<li>GPT-3 tokenizer。**在 Turbo 之前的 OpenAI 模型（ADA、Babbage、Curie、Davinci）中使用。**更多信息：<a href="https://platform.openai.com/tokenizer">OpenAI Tokenizer</a>。</li>
+<li>（旧版）GPT-2/3 tokenizer。由原版 TavernAI 使用。**如果不确定，请选择这个。**更多信息： <a href="https://github.com/josephrocca/gpt-2-3-tokenizer">gpt-2-3-tokenizer</a>.</li>
+<li>LLaMA tokenizer。由 LLaMA 1/2 系列模型使用：Vicuna、Hermes、Airoboros 等。<strong>如果使用 LLaMA 1/2 模型，请选择</strong>。</li>
+<li>NerdStash tokenizer。由 NovelAI 的 Clio 模型使用。<strong>如果使用 Clio 模型，请选择</strong>。</li>
+<li>NerdStash v2 tokenizer。由 NovelAI 的 Kayra 模型使用。<strong>如果使用 Kayra 模型，请选择</strong>。</li>
+<li>API tokenizer。通过调用查询 API，直接从模型中获取 Token 计数。只有 Oobabooga&#x27;s TextGen 支持。<strong>如果使用最新版本的 TextGen API，请选择</strong>。</li>
 </ol>
-<p>Chat Completion APIs <strong>(non-overridable)</strong>:</p>
+<p>聊天补全 API <strong>（不可覆盖）</strong>：</p>
 <ol>
-<li>OpenAI / Claude / OpenRouter / Window: model-dependant tokenizer via <a href="https://github.com/openai/tiktoken">tiktoken</a>.</li>
-<li>Scale API: GPT-4 tokenizer.</li>
-<li>Fallback tokenizer (for proxies): GPT-3.5 turbo tokenizer.</li>
+<li>OpenAI / Claude / OpenRouter / Window：通过 <a href="https://github.com/openai/tiktoken">tiktoken</a> 计算取决于模型的 Token。</li>
+<li>Scale API： GPT-4 tokenizer。</li>
+<li>Fallback tokenizer（用于代理）：GPT-3.5 turbo tokenizer。</li>
 </ol>
-<doc-anchor-target id="token-padding">
+<doc-anchor-target id="token-填充">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#token-padding">#</doc-anchor-trigger>
-        <span>Token Padding</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#token-填充">#</doc-anchor-trigger>
+        <span>Token 填充</span>
     </h3>
 </doc-anchor-target>
-<p><strong>Important: This section doesn&#x27;t apply to OpenAI API. SillyTavern will always use a matching tokenizer for OpenAI models.</strong></p>
-<p>SillyTavern cannot use a proper tokenizer provided by the model running on a remote instance of KoboldAI or Oobabooga&#x27;s TextGen, so all token counts assumed during prompt generation are estimated based on the selected <doc-anchor-trigger to="#tokenizer">tokenizer</doc-anchor-trigger> type.</p>
-<p>Since the results of tokenization can be inaccurate on context sizes close to the model-defined maximum, some parts of the prompt may be trimmed or dropped, which may negatively affect the coherence of character definitions.</p>
-<p>To prevent this, SillyTavern allocates a portion of the context size as padding to avoid adding more chat items than the model can accommodate. If you find that some part of the prompt is trimmed even with the most-matching tokenizer selected, adjust the padding so the description is not truncated.</p>
-<p>You can input negative values for reverse padding, which allows allocating more than the set maximum amount of tokens.</p>
-<doc-anchor-target id="custom-stopping-strings">
+<p><strong>重要：本部分不适用于 OpenAI API。SillyTavern 将始终为 OpenAI 模型使用匹配的 tokenizer。</strong></p>
+<p>SillyTavern 无法使用在 KoboldAI 或 Oobabooga&#x27;s TextGen 远程实例上运行的模型所提供的恰当的 tokenizer，因此在生成提示词时假定所有 token 数量都是根据所选的 <doc-anchor-trigger to="#%E5%88%86%E8%AF%8D%E5%99%A8-Tokenizer">分词器 Tokenizer</doc-anchor-trigger> 类型估算的。</p>
+<p>由于 tokenization 的结果在上下文大小接近模型定义的最大值时可能会不准确，提示符的某些部分可能会被截断或删除，这可能会对角色设定的一致性产生负面影响。</p>
+<p>为避免出现这种情况，SillyTavern 会分配一部分上下文大小作为填充，以避免添加的聊天内容超过模型所能容纳的范围。如果你发现即使选择了最匹配的 tokenizer，提示词的某些部分也会被截断，那么请调整填充，这样描述就不会被截断。</p>
+<p>您可以为反向填充输入负值，这样就可以分配比设定的最大 token 还要多。</p>
+<doc-anchor-target id="自定义停止字符串">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#custom-stopping-strings">#</doc-anchor-trigger>
-        <span>Custom Stopping Strings</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#自定义停止字符串">#</doc-anchor-trigger>
+        <span>自定义停止字符串</span>
     </h2>
 </doc-anchor-target>
 <p>Accepts a JSON-serialized array of stopping strings. Example: <code v-pre>[&quot;\n&quot;, &quot;\nUser:&quot;, &quot;\nChar:&quot;]</code>. If you&#x27;re unsure about the formatting, use an <a href="https://jsonlint.com/">online JSON validator</a>.</p>
@@ -313,45 +313,68 @@ Character:</code></pre>
 <li>NovelAI</li>
 <li>OpenAI, including via OpenRouter (max 4 strings)</li>
 </ol>
+<p>接受一个序列化的 JSON 数组，用于停止序列。例如：<code v-pre>[&quot;\n&quot;, &quot;\nUser:&quot;, &quot;\nChar:&quot;]</code>。如果不确定格式，请使用 <a href="https://jsonlint.com/">在线 JSON 验证</a>。</p>
+<p>支持的 API：</p>
+<ol>
+<li>KoboldAI（1.2.2 及更高版本）</li>
+<li>oobabooga&#x27;s Text Generation WebUI</li>
+<li>NovelAI</li>
+<li>OpenAI，包括通过 OpenRouter（最多 4 个序列）</li>
+</ol>
 <doc-anchor-target id="multigen">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#multigen">#</doc-anchor-trigger>
         <span>Multigen</span>
     </h3>
 </doc-anchor-target>
-<p><em>This feature provides a pseudo-streaming functionality that conflicts with token streaming. When Multigen is enabled and generation API supports streaming, only Multigen streaming will be used.</em></p>
-<p>SillyTavern tries to create faster and longer responses by chaining the generation using smaller batches.</p>
-<doc-anchor-target id="default-settings">
+<p><em>此特性提供的伪流式传输功能与 token 流式传输功能相冲突。当启用 Multigen 且 API 支持流式传输时，将仅使用 Multigen 流式传输。</em></p>
+<p>SillyTavern 尝试通过使用较小批次的链式生成来创建更快、更长的响应。</p>
+<doc-anchor-target id="默认设置">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#default-settings">#</doc-anchor-trigger>
-        <span>Default settings</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#默认设置">#</doc-anchor-trigger>
+        <span>默认设置</span>
     </h4>
 </doc-anchor-target>
 <p>First batch = 50 tokens</p>
 <p>Next batches = 30 tokens</p>
-<doc-anchor-target id="algorithm">
+<doc-anchor-target id="算法">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#algorithm">#</doc-anchor-trigger>
-        <span>Algorithm</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#算法">#</doc-anchor-trigger>
+        <span>算法</span>
     </h4>
 </doc-anchor-target>
 <ol>
-<li>Generate the first batch (if the amount of generation setting is more than batch length).</li>
-<li>Generate the next batch of tokens until one of the stopping conditions is reached.</li>
-<li>Append the generated text to the next cycle&#x27;s prompt.</li>
+<li>生成第一批（如果设置的生成量大于批长度）。</li>
+<li>生成下一批 tokens，直到达到其中一个停止条件。</li>
+<li>将生成的文本附加到下一个周期的提示词中。</li>
 </ol>
-<doc-anchor-target id="stopping-conditions">
+<doc-anchor-target id="停止条件">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#stopping-conditions">#</doc-anchor-trigger>
-        <span>Stopping conditions</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#停止条件">#</doc-anchor-trigger>
+        <span>停止条件</span>
     </h4>
 </doc-anchor-target>
 <ol>
-<li>Generated enough text.</li>
-<li>The character starts speaking for You.</li>
-<li>&lt;|endoftext|&gt; token reached.</li>
-<li>No text generated.</li>
-<li>Stop sequence generated. (Instruct mode only)</li>
+<li><p>Generated enough text.</p>
+</li>
+<li><p>The character starts speaking for You.</p>
+</li>
+<li><p>&lt;|endoftext|&gt; token reached.</p>
+</li>
+<li><p>No text generated.</p>
+</li>
+<li><p>Stop sequence generated. (Instruct mode only)</p>
+</li>
+<li><p>生成足够的文本。</p>
+</li>
+<li><p>角色开始为你说话。</p>
+</li>
+<li><p>遇到了 &lt;|endoftext|&gt; token。</p>
+</li>
+<li><p>未生成文本。</p>
+</li>
+<li><p>生成了停止序列。（仅限指示模式）</p>
+</li>
 </ol>
 
                                 
@@ -368,20 +391,20 @@ Character:</code></pre>
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../usage/api-connections/scale/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../usage/core-concepts/worldinfo/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Scale</span>
+                                                <span class="block mt-1">World Info</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../usage/core-concepts/authors-note/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../usage/branches/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Author's Note</span>
+                                                <span class="block mt-1">Branches</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -425,6 +448,6 @@ Character:</code></pre>
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Advanced Formatting", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "高级格式设置", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
