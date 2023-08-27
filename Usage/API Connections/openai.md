@@ -3,8 +3,8 @@ order: 20
 ---
 # 对话补全
 
-Chat completion APIs include OpenAI, Claude, and PaLM.
-WindowAI & OpenRouter allows connection to these as well.
+对话补全 API 包括 OpenAI、Claude 和 PaLM。
+WindowAI 和 OpenRouter 也允许连接到这些 API。
 
 ## OpenAI
 
