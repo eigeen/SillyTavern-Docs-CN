@@ -1,6 +1,6 @@
-# Character Design
+# 角色设计
 
-### Character Description
+### 角色描述
 
 Used to add the character description and the rest that the AI should know. This will always be present in the prompt, so all the important facts should be included here.
 
@@ -8,63 +8,69 @@ For example, you can add information about the world in which the action takes p
 
 It could be of any length (be it 200 or 2000 tokens) and formatted in any style (free text, W++, conversation style, etc).
 
-### Methods and format
+用于添加角色描述和AI需要知道的其他信息。此内容将始终出现在提示词中，因此所有重要的内容都应该在这里交代。
 
-Methods of character formatting is a complicated topic beyond the scope of this documentation page.
+例如，您可以添加有关事件发生的世界的信息，并描述该角色的特征。
 
-Recommended guides that were tested with or rely on SillyTavern's features:
+角色描述的长度不限（无论 200 或 2000 tokens），格式不限（自由文本、W++、对话格式等）。
+
+### 方法和格式
+
+角色格式化方法是一个复杂的话题，超出了本文档页面的范围。
+
+推荐阅读以下指南，他们已经在 SillyTavern 上经过了测试，或者被 SillyTavern 所依赖。
 
 * AliCat's Ali:Chat guide: https://rentry.co/alichat
 * kingbri's minimalistic guide: https://rentry.co/kingbri-chara-guide
 * Kuma's W++ guide: https://rentry.co/WPP_For_Dummies
 
-### Character tokens
+### 角色 Tokens
 
-**TL;DR: If you're working with an AI model with a 2048 context token limit, your 1000 token character definition is cutting the AI's 'memory' in half.**
+**TL;DR: 假设你使用的AI模型限制上下文最多输入 2048 个 Token，如果你设定的角色设定包含了 1000 个 Token，就相当于将AI的“记忆”削减了一半。**
 
-To put this in perspective, a decent response from a good AI can easily be around 200-300 tokens. In this case, the AI would only be able to 'remember' about 3 exchanges worth of chat history.
+从这个角度来看，一个表现优秀的AI做出一个像样的回复很容易就会占用 200-300 个 Token。在这种情况下，AI只能“记住”大约 3 次聊天记录。
 
 ***
 
-### Why did my character's token counter turn red?
+### 为什么我的角色 Token 计数器变成红色了？
 
-When we see your character has over half of the model-defined context length of tokens in its definitions, we highlight it for you because this can lower the AI's capabilities to provide an enjoyable conversation.
+当程序发现你的角色设定 Token 长度大于模型定义的上下文长度的一半时，程序就会将计数器标红，因为这会降低AI对话的体验。
 
-### What happens if my Character has too many tokens?
+### 如果我的角色 Token 过大会怎么样？
 
-Don't worry - it won't break anything. At worst, if the Character's permanent tokens are too large, it simply means there will be less room left in the context for other things (see below).
+首先别慌，这不会造成破坏性问题。在最坏的情况下，如果角色的永久 Token 过大，只是表示上下文中留给其他事情的空间减少了（见下文）。
 
-The only negative side effect this can have is the AI will have less 'memory', as it will have less chat history available to process.
+这样做唯一的负面影响就是AI的“记忆”会减少，因为它可以处理的聊天记录会减少。
 
-This is because every AI model has a limit to the amount of context it can process at one time.
+这是因为每个AI模型一次能处理的上下文数量都是有限的。
 
-### 'Context'?
+### “上下文（Context）”？
 
-This is the information that gets sent to the AI each time you ask it to generate a response:
+每次要求AI生成回复时，这些信息都会发送给AI：
 
-* Character definitions
-* Chat history
-* Author's Notes
-* Special Format strings
-* [bracket commands]
+* 角色设定
+* 聊天记录
+* 作者注释
+* 特殊格式化字符串
+* [括号命令]
 
-SillyTavern automatically calculates the best way to allocate the available context tokens before sending the information to the AI model.
+在向AI模型发送信息之前，SillyTavern 会自动计算分配可用上下文 Tokens 的最佳方式。
 
-### What are a Character's 'Permanent Tokens'?
+### 角色的永久 Token 是什么？
 
-These will always be sent to the AI with every generation request:
+每次生成请求都会向AI发送这些信息：
 
-* Character Name (keep the name short! Sent at the start of EVERY Character message)
-* Character Description Box
-* Character Personality Box
-* Scenario Box
+* 角色名称（保持名称简短！它会放在所有角色信息的开头）
+* 角色描述
+* 角色性格
+* 场景
 
-### What parts of a Character's Definitions are NOT permanent?
+### 角色设定的哪些部分不是永久性的？
 
-* The first message box - only sent once at the start of the chat.
-* Example messages box - only kept until chat history fills up the context (optionally these can be forced to be kept in context)
+* 第一条消息——只在聊天开始时发送一次。
+* 对话示例——只保留到聊天历史填满上下文（可选择强制保留在上下文中）
 
-### Popular AI Model Context Token Limits
+### 常用的AI模型上下文词元限制
 
 * Older models below 6B parameters - 1024
 * Pygmalion 6B, LLaMA 1 models (stock) - 2048
@@ -74,35 +80,35 @@ These will always be sent to the AI with every generation request:
 * Anthropic's Claude - 8000 (older versions) or 100k (Claude 2)
 * NovelAI - 8192 (Kayra, Opus tier; Clio, all tiers), 6144 (Kayra, Scroll tier), or 3072 (Kayra, Tablet tier)
 
-### Personality summary
+### 性格总结
 
-A brief description of the personality.
+对角色性格的简要描述。
 
-Examples:
+例子：
 
 * `Cheerful, cunning, provocative`
 * `Aqua likes to do nothing and also likes to get drunk`
 
-### First message
+### 第一条消息
 
-The First Message is an important thing that sets exactly how and in what style the character will communicate.
+第一条信息很重要，它决定角色的交流方式和风格。
 
-The character's first message should be long so that later it would be less likely that the character would respond with very short messages.
+角色的第一条信息应该尽量长，这样之后的聊天就不太可能用很短的信息来回应。
 
-You can also use asterisks ** to describe the character's actions.
+您还可以使用星号 ** 来描述人物的行为。
 
-For example:
+例如：
 
 `*I noticed you came inside, I walked up and stood right in front of you* Welcome. I'm glad to see you here. *I said with a toothy smug sunny smile looking you straight in the eye* What brings you...`
 
-### Examples of dialogue
+### 对话示例
 
-Describes how the character speaks. Before each example, you need to add the \<START\> tag.
+描述角色如何对话。在每一个示例前，你应该加上 \<START\> 标签。
 
-* Use \{\{char\}\} instead of the character name.
-* Use \{\{user\}\} instead of the user name.
+* 使用 \{\{char\}\} 而不是角色名称。
+* 使用 \{\{user\}\} 而不是用户名称。
 
-Example:
+例子：
 
 \<START\>
 
@@ -120,23 +126,23 @@ Example:
 
 \{\{char\}\}: \*excitedly\* Hello there, dear! Are you new to Axel? Don't worry, I, Aqua the goddess of water, am here to help you! Do you need any assistance? And may I say, I look simply radiant today! \*strikes a pose and looks at you with puppy eyes\*
 
-### Scenario
+### 场景
 
-Circumstances and context of the dialogue.
+互动的环境和背景（情况和上下文）。
 
-### Replacement tags (macros)
+### 替换标签（宏）
 
-*A list of tags that are replaced when sending to generate:*
+*发送并生成上下文时被替换的标记列表：*
 
-1. \{\{user\}\} and \<USER\> are replaced by the User's Name
-2. \{\{char\}\} and \<BOT\> are replaced by the Character's Name
-3. \{\{time\}\} is replaced with the current system time.
-4. \{\{time_UTC±X\}\} is replaced with the current time in the specified UTC offset (timezone). {e.g. \{\{time_UTC\-4\}\} for the time in UTC-04:00, for UTC+02:00 use \{\{time_UTC\+2\}\}.
-5. \{\{date\}\} is replaced with the current system date.
-6. \{\{idle_duration\}\} inserts a humanized string of the time range since the last user message was sent (examples: 4 hours, 1 day).
-7. \{\{random:(args)\}\} returns a random item from the list. (e.g. \{\{random:1,2,3,4\}\} will return 1 of the 4 numbers at random). Works with text lists too.
-8. \{\{roll:(formula)\}\} generates a random value and returns it using the provided dice formula using D&D dice syntax: XdY+Z. For example, \{\roll:d6\}\} will generate a random value in the 1-6 range (standard six-sided dice).
+1. \{\{user\}\} 和 \<USER\> 会被替换为用户的名称。
+2. \{\{char\}\} 和 \<BOT\> 会被替换为角色的名称。
+3. \{\{time\}\} 会被替换为当前的系统时间。
+4. \{\{time_UTC±X\}\} 会被替换为当前的系统时间+指定的UTC时区偏移。 {例如 \{\{time_UTC\-4\}\} 表示时间 UTC-04:00，要表示 UTC+02:00 可以使用 \{\{time_UTC\+2\}\}.
+5. \{\{date\}\} 会被替换为当前的系统日期。
+6. \{\{idle_duration\}\} 会被替换为一个易于阅读的字符串，表示自上次发送用户信息以来的时间间隔（例如： 4 hours, 1 day）。
+7. \{\{random:(args)\}\} 从列表中返回一个随机项。（例如 \{\{random:1,2,3,4\}\} 将随机返回4个数字中的1个）。此功能也适用于文本列表。
+8. \{\{roll:(formula)\}\} 通过扔骰子来生成一个随机值，采用龙与地下城的骰子语法：XdY+Z。例如，\{\{roll:d6\}\} 将生成1-6范围内的随机值（标准六面骰子）。
 
-### Favorite Character
+### 添加到收藏夹
 
-Mark the character as a favorite to quickly filter on the side menu bar by pressing the "star" button.
+按下“星”形按钮，将角色添加到收藏夹，以便在侧边菜单栏上快速筛选。
