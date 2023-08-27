@@ -2,12 +2,6 @@
 
 ### 角色描述
 
-Used to add the character description and the rest that the AI should know. This will always be present in the prompt, so all the important facts should be included here.
-
-For example, you can add information about the world in which the action takes place and describe the characteristics of the character you are playing for.
-
-It could be of any length (be it 200 or 2000 tokens) and formatted in any style (free text, W++, conversation style, etc).
-
 用于添加角色描述和AI需要知道的其他信息。此内容将始终出现在提示词中，因此所有重要的内容都应该在这里交代。
 
 例如，您可以添加有关事件发生的世界的信息，并描述该角色的特征。
