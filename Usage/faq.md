@@ -213,7 +213,7 @@ Now click Regenerate, and the Bank Manager's line will be recreated based on the
 Bank Manager: Alright, alright, I'll open it! Please don't shoot! *He walks up to the vault and begins entering his unlock code.*
 ```
 
-## 在哪里可以找到旧版本的背景？
+## 在哪里可以找到旧版本的背景图？
 
 We're moving to a 100% original content only policy, so old background images have been removed from this repository.
 

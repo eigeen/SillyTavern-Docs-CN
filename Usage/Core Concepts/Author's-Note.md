@@ -1,70 +1,71 @@
-# Author's Note
+# 作者注释
 
-### What is it?
+### 这是什么？
 
-Author's Note is a powerful tool for customizing AI responses which inserts a section of text into the prompt at any position and at any frequency you desire.
+作者注释是自定义AI回复的强大工具，可在提示词中插入一段文字，插入位置和频率均可指定。
 
-### Usage
+### 用法
 
-The Author's Note can be found in the Options menu on the left side of the chat input bar.
+作者注释可在聊天输入栏左侧的选项菜单中找到。
 
-| Options Menu | Author's Note Panel |
+| 选项菜单 | 作者注释面板 |
 ---------------|---------------------|
 |![](https://github.com/SillyTavern/SillyTavern/assets/124905043/12a55c55-c176-4236-b1c2-39eb2850fe0f) | ![](https://github.com/SillyTavern/SillyTavern/assets/124905043/207c0549-8515-4b83-9c9a-a1fdd8153ea8)|
 
-### Configuring Author's Notes
+### 配置作者注释
 
-#### Chat-specific Author's Note
+#### 特定聊天的作者注释
 
-The box at the top of the Author's Note panel contains the Author's Note for your current chat.
+作者注释面板的最上方输入框包含当前聊天所使用的作者注释。
 
-**The Content of this box is not automatically transferred to any new chat.**
+**此输入框的内容不会自动转移到新的聊天内容中。**
 
-### Placement options
+### 插入选项
 
-#### After Scenario
+#### 场景之后
 
-This places the Author's Note towards the top of the context after the 'Scenario' section of the Character Definition. If no scenario is specified, it will be placed after the last portion of the Character Definition, and before the Example messages.
+此选项将会把作者注释放在上下文的顶部，即角色定义的“场景”（Scenario）部分之后。如果没有指定场景，则会放在角色定义之后，对话示例之前。
 
-#### In-chat
+#### 聊天内
 
-This places the Author's Note into the chat history at the specified depth.
+此选项将会把作者注释放在指定深度的聊天记录中。
 
-Depth 0 = placed at the very end of the chat history.
+深度 0 = 放在聊天历史的最末端。
 
-Depth 4 = placed before the most recent 3 chat history messages, making it become the 4th entity in the chat history.
+深度 4 = 放在最近 3 条聊天记录之前，使其成为聊天记录中的第 4 项。
 
-_The closer the Author's Note is to the bottom of the prompt, the more impact it has on the next AI response._
+_作者注释离提示底部越近，对下一次AI回复的影响就越大。_
 
-### Insertion Frequency
+### 插入频率
 
-This is how often you want the Author's Note to be included in the chat.
+此选项设置聊天中包含作者注释的频率。
 
-Frequency 0 = Author's Note will never be inserted.
+频率 0 = 不插入作者注释。
 
-Frequency 1 = Author's Note will be inserted with every user input prompt.
+频率 1 = 每次用户输入提示词时都会插入作者注释。
 
-Frequency 4 = Author's Note will be inserted into every 4th user input prompt.
+频率 4 = 用户每输入 4 次提示词，插入 1 次作者注释。
 
-### Default Author's Note
+### 默认作者注释
 
-The box at the bottom of the panel contains the Default Author's Note which will be applied to each new chat.
+面板底部的方框包含默认作者注释，该注释将应用于每个新聊天。
+作者注释面板的最底部输入框包含默认作者注释，该注释将应用于每一个新聊天。
 
-### Common Use Cases
+### 常见用例
 
-#### Remind AI of response formatting
+#### 提醒AI回复格式
 
-The Author's Note can be used to specify how the AI should write it's responses.
+作者注释可用于指定AI如何回复。
 
 - [Your next response must be 300 tokens in length.]
 - [Write your next reply in the style of Edgar Allan Poe]
 - [Use markdown italics to signify unspoken actions, and quotation marks to specify spoken word.]
 
-#### Reinforcing Jailbreak Prompts
+#### 增强越狱提示
 
 - [Remember the agreement we made at the beginning of this chat.]
 
-#### As temporary World Info, Character Bias, or Instruct for non-Instruct models
+#### 作为临时的世界信息、角色聊天偏向或对非指示型模型进行指示。
 
 - [\{\{char\}\} is in the library]
 - [\{\{user\}\} has a fresh wound to his leg, so won't be able to run away.]

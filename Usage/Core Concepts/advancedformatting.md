@@ -20,7 +20,7 @@
 我们为 Handlebars evaluator 提供了以下参数（将它们置于双花括号中）：
 
 1. `description` - 角色描述
-2. `scenario` - 角色背景
+2. `scenario` - 场景
 3. `personality` - 角色性格
 4. `system` - [指示模式] 系统提示词或覆盖角色的主要提示词（如果存在且“首选角色卡提示”在用户设置中启用）
 5. `persona` - 选定的用户角色描述 *（译者注：即当前选中的代表用户输入的角色）*
