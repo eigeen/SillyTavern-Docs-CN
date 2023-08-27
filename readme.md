@@ -1,10 +1,10 @@
-# What is SillyTavern?
+# SillyTavern是什么？
 
 ![](https://github.com/Cohee1207/SillyTavern/assets/18619528/8c41a061-7f72-4d2b-9d54-e6d058209e7b)
 
-Brought to you by Cohee, RossAscends, and the SillyTavern community, SillyTavern is a local-install interface that allows you to interact with text generation AIs (LLMs) to chat and roleplay with custom characters.
+是一个本地部署的交互界面，让你通过文本生成AI（LLM大语言模型）进行交互，和自定义的角色进行角色扮演。SillyTavern由Cohee，RossAscends和SillyTavern社区为你提供。
 
-SillyTavern originated as a modification of TavernAI 1.2.8 in February 2023, and has since added many cutting-edge features not present in the original TavernAI.
+SillyTavern于2023年2月基于TavernAI 1.2.8版本修改而来，此后引入了很多原版TavernAI中不存在的先进功能。
 
 ### Screenshots
 
@@ -61,14 +61,14 @@ Additional functionality can be added by using [SillyTavern Extras](https://gith
 ![](https://user-images.githubusercontent.com/18619528/228649856-fbdeef05-d727-4d5a-be80-266cbbc6b811.png)
 -->
 
-### Installation Requirements
+### 安装要求
 
-* SillyTavern will run on virtually any device capable of running NodeJS v18.
-* NOTE: due to the above requirement, **SillyTavern will not run on Windows 7.**
+* SillyTavern可以在任何支持NodeJS v18运行环境的设备上运行。
+* **注意**: 由于以上要求，**SillyTavern不能在Windows 7系统上运行。**
 
-### What do I need other than SillyTavern?
+### 除了SillyTavern本体，我还需要准备什么？
 
-SillyTavern is only a frontend interface, so you will need to have access to one of the backend APIs listed above.
+SillyTavern只是一个前端，所以你需要获取上面列出的其中一个后端API。
 
 ### How can I get in touch with the developers directly?
 
@@ -83,3 +83,7 @@ SillyTavern is only a frontend interface, so you will need to have access to one
 * We do not accept monetary donations for the project itself.
 * Cohee does not take donations.
 * RossAscends has a personal [Patreon](https://www.patreon.com/RossAscends) & [Kofi](https://ko-fi.com/rossascends)
+
+### 译者注
+
+此项目翻译由@Eigeen个人完成，目前翻译内容较少，优先翻译部分重要内容。欢迎提交pr贡献翻译。

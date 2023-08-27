@@ -2,17 +2,17 @@
 order: 10
 label: Windows
 ---
-# Windows Installation
+# Windows安装
 
-!!!warning
-DO NOT INSTALL INTO ANY WINDOWS CONTROLLED FOLDER (Program Files, System32, etc).
+!!!警告
+不要安装到任何Windows直接控制的文件夹（Program Files, System32等）。
 
-DO NOT RUN START.BAT WITH ADMIN PERMISSIONS
+不要以管理员权限运行start.bat。
 
-INSTALLATION ON WINDOWS 7 IS IMPOSSIBLE AS IT CAN NOT RUN NODEJS 18.16
+由于Windows 7不支持NodeJS v18.16，因此无法在Windows 7上安装SillyTavern。
 !!!
 
-## Installing via GitHub Desktop (easiest)
+## 通过GitHub Desktop工具安装（最简便）
 (this allows git usage **only** in GitHub Desktop, if you want to use `git` on the command line too, you also need to install [Git for Windows](https://gitforwindows.org/))
   1. Install [NodeJS](https://nodejs.org/en) (latest LTS version is recommended)
   2. Install [GitHub Desktop](https://central.github.com/deployments/desktop/desktop/latest/win32)
@@ -38,7 +38,7 @@ INSTALLATION ON WINDOWS 7 IS IMPOSSIBLE AS IT CAN NOT RUN NODEJS 18.16
 
   10. Connect to any of the [supported APIs](https://docs.sillytavern.app/usage/api-connections/) and start chatting!
 
-## Installing via Git
+## 通过Git安装
 
   1. Install [NodeJS](https://nodejs.org/en) (latest LTS version is recommended)
   2. Install [Git for Windows](https://gitforwindows.org/)
@@ -53,7 +53,7 @@ INSTALLATION ON WINDOWS 7 IS IMPOSSIBLE AS IT CAN NOT RUN NODEJS 18.16
   7. Once everything is cloned, double click `Start.bat` to make NodeJS install its requirements.
   8. The server will then start, and SillyTavern will popup in your browser.
 
-## Installing via ZIP download (discouraged)
+## 通过下载zip压缩包安装（不推荐）
 
   1. Install [NodeJS](https://nodejs.org/en) (latest LTS version is recommended)
   2. Download the zip from this GitHub repo. (Get the `Source code (zip)` from [Releases](https://github.com/SillyTavern/SillyTavern/releases/latest))
