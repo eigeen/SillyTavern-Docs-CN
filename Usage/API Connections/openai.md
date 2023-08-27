@@ -1,7 +1,7 @@
 ---
 order: 20
 ---
-# Chat Completions
+# 对话补全
 
 Chat completion APIs include OpenAI, Claude, and PaLM.
 WindowAI & OpenRouter allows connection to these as well.

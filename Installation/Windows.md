@@ -2,7 +2,7 @@
 order: 10
 label: Windows
 ---
-# Windows安装
+# Windows 安装
 
 !!!警告
 不要安装到任何Windows直接控制的文件夹（Program Files, System32等）。
@@ -12,7 +12,7 @@ label: Windows
 由于Windows 7不支持NodeJS v18.16，因此无法在Windows 7上安装SillyTavern。
 !!!
 
-## 通过GitHub Desktop工具安装（最简便）
+## 通过 GitHub Desktop 安装（最简便）
 (this allows git usage **only** in GitHub Desktop, if you want to use `git` on the command line too, you also need to install [Git for Windows](https://gitforwindows.org/))
   1. Install [NodeJS](https://nodejs.org/en) (latest LTS version is recommended)
   2. Install [GitHub Desktop](https://central.github.com/deployments/desktop/desktop/latest/win32)
@@ -38,7 +38,7 @@ label: Windows
 
   10. Connect to any of the [supported APIs](https://docs.sillytavern.app/usage/api-connections/) and start chatting!
 
-## 通过Git安装
+## 通过 Git 安装
 
   1. Install [NodeJS](https://nodejs.org/en) (latest LTS version is recommended)
   2. Install [Git for Windows](https://gitforwindows.org/)
