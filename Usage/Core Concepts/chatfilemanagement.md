@@ -1,25 +1,25 @@
-# Chat File Management
+# 聊天文件管理
 
-This page describes the ways you can manage your AI chat files.
+本页介绍了管理 AI 聊天文件的方法。
 
-### Solo Chats
+### 单人聊天
 
-#### Chat import
+#### 导入聊天
 
-**Import chats into SillyTavern**
+**将聊天导入 SillyTavern**
 
-To import Character.AI chats, use this tool: [https://github.com/0x000011b/characterai-dumper](https://github.com/0x000011b/characterai-dumper).
+要导入 Character.AI 的聊天，用这个工具：[https://github.com/0x000011b/characterai-dumper](https://github.com/0x000011b/characterai-dumper).
 
-### Group Chats
+### 群聊
 
-### Export as .txt
+### 导出为 .txt
 
-### Bookmarks
+### 书签
 
-### Rename Chat
+### 重命名聊天
 
-By default chat files are given a named with the date and time they were started.
+默认情况下，聊天文件会以开始的日期和时间命名。
 
-You can change this by clicking the pencil icon and typing in a new name.
+你可以单击铅笔图标并输入新名称来更改。
 
-This wil break links between bookmarks related to that chat.
+这将破坏与该聊天相关的书签之间的链接。
