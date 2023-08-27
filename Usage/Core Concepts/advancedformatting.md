@@ -50,7 +50,7 @@ Character:
 
 ### 分词器
 
-分词器（Tokenizer）是一种将一段文本分解成称为 Tokens 的较小单元的工具。这些 Tokens 可以是单个词，甚至是词的一部分，如前缀、后缀或标点符号。根据经验，一个 Token 一般对应 3 到 4 个字符的文本。
+分词器（Tokenizer）是一种将一段文本分解成称为词元（Token）的较小单元的工具。这些词元可以是单个词，甚至是词的一部分，如前缀、后缀或标点符号。根据经验，一个词元一般对应 3 到 4 个字符的文本。
 
 SillyTavern 提供了一个“最佳匹配”选项，它会根据所使用的 API 提供商，使用以下规则尝试匹配分词器。
 
@@ -62,30 +62,30 @@ SillyTavern 提供了一个“最佳匹配”选项，它会根据所使用的 A
 
 如果你得到的结果不准确或想进行试验，你可以设置一个 *override tokenizer*，让 SillyTavern 在向AI后端发出请求时使用：
 
-1. None。每个 Token 估计约为 3.3 个字符，四舍五入到最接近的整数。**如果你的提示词在上下文过长时被截断，请试试这个。** KoboldAI Lite 采用的就是这种。
+1. None。每个词元估计约为 3.3 个字符，四舍五入到最接近的整数。**如果你的提示词在上下文过长时被截断，请试试这个。** KoboldAI Lite 采用的就是这种。
 2. GPT-3 tokenizer。 **在 Turbo 之前的 OpenAI 模型（ADA、Babbage、Curie、Davinci）中使用。** 更多信息：[OpenAI Tokenizer](https://platform.openai.com/tokenizer)。
 3. （旧版）GPT-2/3 tokenizer。由原版 TavernAI 使用。**如果不确定，请选择这个。** 更多信息： [gpt-2-3-tokenizer](https://github.com/josephrocca/gpt-2-3-tokenizer).
 4. LLaMA tokenizer。由 LLaMA 1/2 系列模型使用：Vicuna、Hermes、Airoboros 等。**如果使用 LLaMA 1/2 模型，请选择**。
 5. NerdStash tokenizer。由 NovelAI 的 Clio 模型使用。**如果使用 Clio 模型，请选择**。
 6. NerdStash v2 tokenizer。由 NovelAI 的 Kayra 模型使用。**如果使用 Kayra 模型，请选择**。
-7. API tokenizer。通过调用查询 API，直接从模型中获取 Token 计数。只有 Oobabooga's TextGen 支持。**如果使用最新版本的 TextGen API，请选择**。
+7. API tokenizer。通过调用查询 API，直接从模型中获取词元计数。只有 Oobabooga's TextGen 支持。**如果使用最新版本的 TextGen API，请选择**。
 
 聊天补全 API **（不可覆盖）**：
-1. OpenAI / Claude / OpenRouter / Window：通过 [tiktoken](https://github.com/openai/tiktoken) 计算取决于模型的 Token。
+1. OpenAI / Claude / OpenRouter / Window：通过 [tiktoken](https://github.com/openai/tiktoken) 计算取决于模型的词元。
 2. Scale API： GPT-4 tokenizer。
 3. Fallback tokenizer（用于代理）：GPT-3.5 turbo tokenizer。
 
 ### 令牌填充
 
-**重要：本部分不适用于 OpenAI API。SillyTavern 将始终为 OpenAI 模型使用匹配的 tokenizer。**
+**重要：本部分不适用于 OpenAI API。SillyTavern 将始终为 OpenAI 模型使用匹配的分词器。**
 
-SillyTavern 无法使用在 KoboldAI 或 Oobabooga's TextGen 远程实例上运行的模型所提供的恰当的 tokenizer，因此在生成提示词时假定所有 token 数量都是根据所选的 [分词器](#分词器) 类型估算的。
+SillyTavern 无法使用在 KoboldAI 或 Oobabooga's TextGen 远程实例上运行的模型所提供的恰当的 tokenizer，因此在生成提示词时假定所有词元数量都是根据所选的 [分词器](#分词器) 类型估算的。
 
 由于 tokenization 的结果在上下文大小接近模型定义的最大值时可能会不准确，提示符的某些部分可能会被截断或删除，这可能会对角色设定的一致性产生负面影响。
 
 为避免出现这种情况，SillyTavern 会分配一部分上下文大小作为填充，以避免添加的聊天内容超过模型所能容纳的范围。如果你发现即使选择了最匹配的 tokenizer，提示词的某些部分也会被截断，那么请调整填充，这样描述就不会被截断。
 
-您可以为反向填充输入负值，这样就可以分配比设定的最大 token 还要多。
+您可以为反向填充输入负值，这样就可以分配比设定的最大词元还要多。
 
 ## 自定义停止字符串
 
@@ -100,20 +100,20 @@ SillyTavern 无法使用在 KoboldAI 或 Oobabooga's TextGen 远程实例上运�
 
 ### Multigen
 
-*此特性提供的伪流式传输功能与 token 流式传输功能相冲突。当启用 Multigen 且 API 支持流式传输时，将仅使用 Multigen 流式传输。*
+*此特性提供的伪流式传输功能与原本的流式传输功能相冲突。当启用 Multigen 且 API 支持流式传输时，将仅使用 Multigen 流式传输。*
 
 SillyTavern 尝试通过使用较小批次的链式生成来创建更快、更长的响应。
 
 #### 默认设置
 
-First batch = 50 tokens
+First batch = 50词元
 
-Next batches = 30 tokens
+Next batches = 30词元
 
 #### 算法
 
 1. 生成第一批（如果设置的生成量大于批长度）。
-2. 生成下一批 tokens，直到达到其中一个停止条件。
+2. 生成下一批词元，直到达到其中一个停止条件。
 3. 将生成的文本附加到下一个周期的提示词中。
 
 #### 停止条件

@@ -58,11 +58,6 @@ SillyTavern 可以连接多种大语言模型（LLM）API。
 
 ### ChatGPT (by OpenAI)
 
-- easy to setup and acquire an API key, 4k 8k, 32k context models available.
-- free trial requires a valid phone number
-- after freetrial, all useage is charged monthly.
-- writing style for roleplay can be repetitive and predictable
-- [设置指南](https://docs.sillytavern.app/usage/api-connections/openai/)
 - 易于设置和获取 API 密钥，提供 4k、8k、32k 上下文模型。
 - 免费试用需要一个有效的电话号码
 - 免费试用后，所有使用按月付费。
@@ -88,13 +83,8 @@ SillyTavern 可以连接多种大语言模型（LLM）API。
 
 ### Mancer AI
 
-- Service that hosts unconstrained models, no need to jailbreak.
-- Uses 'credits' to pay for tokens on various models. Free credits refill daily.
-- Does not log prompts by default, but you can enable it to get credit discounts on tokens.
-- Uses an API similar to `Oobabooga TextGeneration WebUI`, see [Mancer docs](https://mancer.tech/docs/clients/#sampling-parameters) for details.
-- [website](https://mancer.tech/), [SillyTavern Setup Instructions](https://mancer.tech/docs/clients/sillytavern/)
 - 托管无限制模型的服务，无需越狱。
-- 使用“点数”支付各种模型的 tokens。每天可以获得免费的点数。
+- 使用“点数”支付各种模型的词元。每天可以获得免费的点数。
 - 默认情况下不记录提示词，但你可以启用它来获得点数折扣。
 - 使用类似于"Oobabooga TextGeneration WebUI "的 API，详见 [Mancer文档](https://mancer.tech/docs/clients/#sampling-parameters)。
 - [网站](https://mancer.tech/), [SillyTavern 设置指南](https://mancer.tech/docs/clients/sillytavern/)
