@@ -2,6 +2,8 @@
 
 通过本节提供的设置，可以对提示词构建策略进行进一步控制。
 
+*译者注：以下内容部分名词翻译尽量采用了 SillyTavern 内自带的中文翻译。即使他们可能并不是特别恰当。*
+
 ### 上下文模板
 
 **这里的大部分设置不适用于对话补全 API，因为它们由提示词管理系统控制。**
@@ -35,7 +37,7 @@
 
 #### 开始回复
 
-作为分隔符插入在渲染完成的 story string 之后和示例对话块之后，但在上下文中第一条信息之前。
+作为分隔符插入在渲染完成的 story string 之后和示例对话块之后，上下文中第一条信息之前。
 
 #### 始终在提示词中添加角色名称
 
@@ -46,9 +48,9 @@
 Character:
 ```
 
-### 分词器 Tokenizer
+### 分词器
 
-分词器是一种将一段文本分解成称为 Tokens 的较小单元的工具。这些 Tokens 可以是单个词，甚至是词的一部分，如前缀、后缀或标点符号。根据经验，一个 Token 一般对应 3 到 4 个字符的文本。
+分词器（Tokenizer）是一种将一段文本分解成称为 Tokens 的较小单元的工具。这些 Tokens 可以是单个词，甚至是词的一部分，如前缀、后缀或标点符号。根据经验，一个 Token 一般对应 3 到 4 个字符的文本。
 
 SillyTavern 提供了一个“最佳匹配”选项，它会根据所使用的 API 提供商，使用以下规则尝试匹配分词器。
 
@@ -61,8 +63,8 @@ SillyTavern 提供了一个“最佳匹配”选项，它会根据所使用的 A
 如果你得到的结果不准确或想进行试验，你可以设置一个 *override tokenizer*，让 SillyTavern 在向AI后端发出请求时使用：
 
 1. None。每个 Token 估计约为 3.3 个字符，四舍五入到最接近的整数。**如果你的提示词在上下文过长时被截断，请试试这个。** KoboldAI Lite 采用的就是这种。
-2. GPT-3 tokenizer。**在 Turbo 之前的 OpenAI 模型（ADA、Babbage、Curie、Davinci）中使用。**更多信息：[OpenAI Tokenizer](https://platform.openai.com/tokenizer)。
-3. （旧版）GPT-2/3 tokenizer。由原版 TavernAI 使用。**如果不确定，请选择这个。**更多信息： [gpt-2-3-tokenizer](https://github.com/josephrocca/gpt-2-3-tokenizer).
+2. GPT-3 tokenizer。 **在 Turbo 之前的 OpenAI 模型（ADA、Babbage、Curie、Davinci）中使用。** 更多信息：[OpenAI Tokenizer](https://platform.openai.com/tokenizer)。
+3. （旧版）GPT-2/3 tokenizer。由原版 TavernAI 使用。**如果不确定，请选择这个。** 更多信息： [gpt-2-3-tokenizer](https://github.com/josephrocca/gpt-2-3-tokenizer).
 4. LLaMA tokenizer。由 LLaMA 1/2 系列模型使用：Vicuna、Hermes、Airoboros 等。**如果使用 LLaMA 1/2 模型，请选择**。
 5. NerdStash tokenizer。由 NovelAI 的 Clio 模型使用。**如果使用 Clio 模型，请选择**。
 6. NerdStash v2 tokenizer。由 NovelAI 的 Kayra 模型使用。**如果使用 Kayra 模型，请选择**。
@@ -73,11 +75,11 @@ SillyTavern 提供了一个“最佳匹配”选项，它会根据所使用的 A
 2. Scale API： GPT-4 tokenizer。
 3. Fallback tokenizer（用于代理）：GPT-3.5 turbo tokenizer。
 
-### Token 填充
+### 令牌填充
 
 **重要：本部分不适用于 OpenAI API。SillyTavern 将始终为 OpenAI 模型使用匹配的 tokenizer。**
 
-SillyTavern 无法使用在 KoboldAI 或 Oobabooga's TextGen 远程实例上运行的模型所提供的恰当的 tokenizer，因此在生成提示词时假定所有 token 数量都是根据所选的 [分词器 Tokenizer](#分词器-Tokenizer) 类型估算的。
+SillyTavern 无法使用在 KoboldAI 或 Oobabooga's TextGen 远程实例上运行的模型所提供的恰当的 tokenizer，因此在生成提示词时假定所有 token 数量都是根据所选的 [分词器](#分词器) 类型估算的。
 
 由于 tokenization 的结果在上下文大小接近模型定义的最大值时可能会不准确，提示符的某些部分可能会被截断或删除，这可能会对角色设定的一致性产生负面影响。
 
@@ -86,15 +88,6 @@ SillyTavern 无法使用在 KoboldAI 或 Oobabooga's TextGen 远程实例上运�
 您可以为反向填充输入负值，这样就可以分配比设定的最大 token 还要多。
 
 ## 自定义停止字符串
-
-Accepts a JSON-serialized array of stopping strings. Example: `["\n", "\nUser:", "\nChar:"]`. If you're unsure about the formatting, use an [online JSON validator](https://jsonlint.com/).
-
-Supported APIs:
-
-1. KoboldAI (versions 1.2.2 and higher)
-2. oobabooga's Text Generation WebUI
-3. NovelAI
-4. OpenAI, including via OpenRouter (max 4 strings)
 
 接受一个序列化的 JSON 数组，用于停止序列。例如：`["\n", "\nUser:", "\nChar:"]`。如果不确定格式，请使用 [在线 JSON 验证](https://jsonlint.com/)。
 
@@ -124,12 +117,6 @@ Next batches = 30 tokens
 3. 将生成的文本附加到下一个周期的提示词中。
 
 #### 停止条件
-
-1. Generated enough text.
-2. The character starts speaking for You.
-3. &lt;|endoftext|&gt; token reached.
-4. No text generated.
-5. Stop sequence generated. (Instruct mode only)
 
 1. 生成足够的文本。
 2. 角色开始为你说话。
