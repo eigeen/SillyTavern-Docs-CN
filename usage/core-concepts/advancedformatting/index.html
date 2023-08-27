@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746457669791">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746458079608">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
@@ -30,11 +30,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.2.0.746457669791" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.2.0.746458079608" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746457669791" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746458079608" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746457669791" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746458079608" data-turbo-eval="false" defer></script>
 
     <Style>
         a {
@@ -217,19 +217,19 @@
     </h4>
 </doc-anchor-target>
 <p>此字段是聊天前角色数据（内部称为 story string）的模板。
-这是为文本补全和指示模型而格式化字符卡的主要方式。</p>
+这是为文本补全和指示模型而格式化角色卡的主要方式。</p>
 <p>该模板支持 Handlebars 语法和任何自定义文本注入或格式化。请参见此处的语言参考：https://handlebarsjs.com/guide/</p>
 <p>我们为 Handlebars evaluator 提供了以下参数（将它们置于双花括号中）：</p>
 <ol>
 <li><code v-pre>description</code> - 角色描述</li>
 <li><code v-pre>scenario</code> - 角色背景</li>
 <li><code v-pre>personality</code> - 角色性格</li>
-<li><code v-pre>system</code> - [指示模式] 系统提示词或覆盖角色的主要提示词（如果存在且&quot;Prefer Char. Prompt&quot;在用户设置中启用）</li>
+<li><code v-pre>system</code> - [指示模式] 系统提示词或覆盖角色的主要提示词（如果存在且“首选角色卡提示”在用户设置中启用）</li>
 <li><code v-pre>persona</code> - 选定的用户角色描述 <em>（译者注：即当前选中的代表用户输入的角色）</em></li>
 <li><code v-pre>char</code> - 角色名</li>
 <li><code v-pre>user</code> - 选定的用户角色名</li>
-<li><code v-pre>wiBefore</code> or <code v-pre>loreBefore</code> - 合并后的激活的“世界信息”条目，并且插入位置为“角色设定前”</li>
-<li><code v-pre>wiAfter</code> or <code v-pre>loreAfter</code> - 合并后的激活的“世界信息”条目，并且插入位置为“角色设定后”</li>
+<li><code v-pre>wiBefore</code> or <code v-pre>loreBefore</code> - 合并后的激活的“世界背景”条目，并且插入位置为“角色设定前”</li>
+<li><code v-pre>wiAfter</code> or <code v-pre>loreAfter</code> - 合并后的激活的“世界背景”条目，并且插入位置为“角色设定后”</li>
 </ol>
 <p><strong>警告</strong>: 如果 story string 模板中缺少上述某些参数，则根本不会在提示词中发送这些参数。</p>
 <doc-anchor-target id="对话示例分隔符">
