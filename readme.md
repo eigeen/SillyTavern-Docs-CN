@@ -2,7 +2,7 @@
 
 ![](https://github.com/Cohee1207/SillyTavern/assets/18619528/8c41a061-7f72-4d2b-9d54-e6d058209e7b)
 
-是一个本地部署的交互界面，让你通过文本生成AI（LLM大语言模型）进行交互，和自定义的角色进行角色扮演。SillyTavern由Cohee，RossAscends和SillyTavern社区为你提供。
+SillyTavern是一个本地部署的交互界面，让你通过文本生成AI（LLM大语言模型）进行交互，和自定义的角色进行角色扮演。SillyTavern由Cohee，RossAscends和SillyTavern社区为你提供。
 
 SillyTavern于2023年2月基于TavernAI 1.2.8版本修改而来，此后引入了很多原版TavernAI中不存在的先进功能。
 

@@ -1,17 +1,17 @@
 input: .
 output: .retype
-url: docs.sillytavern.app
+url: docs.eigeen.cc
 meta:
-  title: " | docs.ST.app"
+  title: " | SillyTavern中文文档"
 branding: 
   logo: static/logo.png
-  title: SillyTavern Documentation
+  title: SillyTavern中文文档
   label: 
 edit:
-  repo: "https://github.com/SillyTavern/SillyTavern-Docs/edit"
-integrations:
-  googleAnalytics:
-    id: G-0NTJMWH0TW1
+  repo: "https://github.com/eigeen/SillyTavern-Docs-CN/edit"
+# integrations:
+#   googleAnalytics:
+#     id: G-0NTJMWH0TW1
 links:
 - text: Github
   link: https://github.com/SillyTavern/SillyTavern

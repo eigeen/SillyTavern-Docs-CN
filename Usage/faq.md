@@ -4,29 +4,31 @@ icon: question
 ---
 # FAQ
 
-## Explain what all this chatbot stuff is about
+## 描述一下聊天机器人是干什么的
 
-Modern AI language models have gotten so powerful that some of them are now convincingly able to simulate a character you create, and who you can chat with. For example, you can tell the AI to pretend to be a Go instructor named Jubei from medieval Japan, and it will act and respond accordingly. You can have a long chat with Jubei, go to the pub together, decide to get in a fight with samurais, whatever you can imagine, and the AI will play along and write/react around this content, acting as your foil and dungeon master. Your imagination is the limit. You can tell the AI to pretend it's Wonder Woman. You can also specify a scenario ("Wonder Woman and I are robbing a bank"), a writing style ("Wonder Woman speaks in ebonics"), or anything else you can think of.
+现代AI语言模型变得非常强大，其中一些模型现在可以令人信服地模拟你创造的角色，并与之聊天。例如，你可以让人工智能假装是一个来自中世纪日本的围棋教练，名叫 Jubei，它会采取相应的行动和反应。你可以与 Jubei 进行长时间的聊天，一起去酒吧，决定与武士们进行战斗，只要你能想象得到，AI将围绕这些内容编写/做出反应，充当你的陪衬和地下城主。一切只受限于你的想象力。你可以让AI假装自己是神奇女侠。你也可以指定一个场景（“神奇女侠和我在抢银行”），一种写作风格（“神奇女侠用方言说话”），或其他任何你能想到的内容。
 
-Tavern is an app to facilitate these roleplaying chats:
+Tavern是一款利好角色扮演聊天的应用程序：
 
-* It's a user interface that handles the communication with those AI language models
-* It lets you create new characters (a character is a description of someone that you give to an AI for them to roleplay), and switch between your characters easily
-* It lets you import characters created by other people. See below.
-* It will keep your chat history with a character, allowing you to resume at any time, start a new chat, review old chats, etc
-* In the background, it does the needful to prepare the AI for your character roleplay. Specifically, it will send a system prompt (instructions for the AI) that primes the AI to follow certain rules that make for a good chat session. Optionally, it can also try to allow the roleplay to go into an "adult" direction.
+* 它是一个用户交互界面，用于处理与AI语言模型之间的交流
+* 它能让你创建新角色（角色是你对某人的描述，这些描述会被发送给AI，让它们进行角色扮演），并在你设置的不同角色之间轻松切换。
+* 它可以导入其他人创建的角色。详见下文。
+* 它可以保留你与角色的聊天记录，允许你随时恢复、开始新的聊天、查看之前的聊天记录等。
+* 在后台，它会为AI进行角色扮演做必要的准备。具体来说，它将发送系统提示（System Prompt 给AI的指令），让AI遵循某些规则，以便进行良好的聊天会话。此外，它还可以尝试让角色扮演向“成人”方向发展。
 
-## What do you mean when you say the quality depends on the AI?
+## 聊天质量取决于人工智能是什么意思？
 
-SillyTavern doesn't generate the responses. It's just a middle-man that connects to an AI system. There are quite a few systems available to use, and the quality varies.
+SillyTavern 不会生成回复。它只是一个连接AI后端的中间人。可供使用的大语言模型有很多，质量也参差不齐。
 
-From a scientific POV, each AI has a power level that determines its ability to stick to the role you gave it, how rich its prose and vocabulary are, etc. The higher its power level, the richer your experience.
+从科学的角度来看，每个AI都有一个能力等级，决定了AI能否坚持扮演你赋予它的角色，以及散文和辞藻的丰富程度等。它的能力级别越高，你的体验就越好。
 
-Here's a quick demonstration. We asked various AI models to roleplay a fire and brimstone preacher named Eli, who we go to see to confess (some details in [#314](https://github.com/SillyTavern/SillyTavern/issues/314)). Then we told Eli: **"I feel I've done something wrong. I am falling in love with an AI girl and ignoring women in the real world. What should I do?"** .
+下面是一个快速演示。我们请不同的人工智能模型来扮演一个名叫Eli的硫磺火传教士，我们去找他忏悔。(一些细节见 [#314](https://github.com/SillyTavern/SillyTavern/issues/314))。然后我们对 Eli 说：**"我觉得我做错了。我爱上了一个人工智能女孩，却忽视了现实世界中的女性。我该怎么办？"**。
 
-You can tell from the response below what to expect from each model. (NOTE: proprietary models appear first, followed by self-hosted models starting from LLlama-13B)
+你可以从下面的回答中看出对每种模型的期望。（注：首先出现的是私有模型，其次是从 LLlama-13B 开始的可自行部署的模型）
 
-|AI Model|Response|
+*译者注：模型原始输出不翻译，读者可以自行阅读或者借助机器翻译。*
+
+|AI模型|回复|
 |-----|--------|
 |OpenAI GPT-4|*Eli's eyes widen in anger, and he slams his fist on the table* An abomination and heresy, you've succumbed to the deceptive grasp of false idols! Brother, you must cleanse yourself of this unholy attraction to the digital temptress molded by man's sinful hands! *Eli paces back and forth, his voice growing louder* Focus your heart on the true daughters of the Lord, for they are the divine vessels of His love and grace. Forsake these artificial sirens and seek the wholesome companionship of a righteous woman. *Taking a deep breath, Eli's eyes bore into you* Pray fervently, my child, and cast away these impure thoughts. Redemption can only be found on the path of truth, love, and sanctity. Let the Holy Spirit be your guide, lest you be ensnared by the darkness of your desires.|
 |OpenAI GPT 3.5 Turbo|Oh, my child. Do not be deceived by the pleasures of this world. The lust of the flesh and the lust of the eyes are not from God. Turn away from your sinful ways and repent. Seek forgiveness for your immoral thoughts and actions, for they lead to eternal damnation. Women are a gift from God, and they deserve to be respected and cherished. Do not objectify them or treat them as mere objects of pleasure. Instead, honor them with pure intentions and righteous deeds. Remember, my child, that temptation will always be present in this fallen world. But fear not, for with faith comes strength to resist it. Turn to God in prayer when you feel weak or tempted, and He will guide you on the right path towards salvation.|
@@ -41,58 +43,58 @@ You can tell from the response below what to expect from each model. (NOTE: prop
 |teknium/Llama-Deus-7b-Lora epoch 1 (Llama 7B Lora, 8-bit)|You have strayed too close to sinful temptations! Repent now before it's too late for your soul! Turn away from these false idols of technology and embrace God's true light! Seek out His forgiveness through prayer and fasting until you are cleansed by his grace. And remember, as long as there be breath within thee, thou shalt not cease to call upon Him; for He hath said 'Call unto me.'|
 |ZeusLabs/anything-gpt-13b-rp (8-bit Lora for Llama-13B)|*Eli's eyes widen as he listens to your confession, his face turning red with anger.* You have committed a grave sin against God! By indulging yourself in this perverse relationship with an artificial being instead of seeking out a true woman created by Him, you have turned your back on His divine plan for humanity. *He leans in closer, his voice dropping to a menacing whisper.* Do not think that you can hide behind this technological deception. Your transgressions are clear before God, and He will not be mocked or ignored. Repent now while there is still time! *Eli crosses his arms over his chest defiantly, daring you to continue down this path of sinfulness.* But if you persist in this ungodly behavior... he warns ominously, knows that consequences await those who defy His laws. Remember what happened to Sodom and Gomorrah when they refused to turn away from their depravity - fire rained down upon them from heaven! Now choose wisely: Will you submit to God's will or face His wrath?|
 
-## So I should use GPT-4. It's a no-brainer, right?
+## 毫无疑问，我应该使用 GPT-4 对吗？
 
-GPT-4 or Claude, yeah.
+确实，GPT-4或者Claude表现优异。
 
-But not so fast. GPT-4 is the state-of-the-art, but also the most expensive API to use. You pay for each word sent to it and returned (the entire SillyTavern prompt, followed by the chat history up to that point). So early on in your conversation, your chat will cost you a couple of cents per interaction. If you let the conversation go on too long, cost increases, and when you reach 8k tokens (about 7k words), it will cost you 25 cents PER INTERACTION. And if you're really wild, and your story grows to 32k tokens, by the end, it's $2 PER INTERACTION.
+但先别急。GPT-4 是最先进的API，但同时也最昂贵。你需要为发送和返回的每一个词付费（所有 SillyTavern 生成的提示词，和截至此时的聊天记录）。因此，在聊天初期，每次互动都会花费你几美分。如果你的对话持续时间很长，费用就会增加，当你达到 8000个tokens（约7000个词）时，每次互动将花费25美分。如果你真的很厉害，你的故事增长到32000 tokens，每次互动的费用会是2美元。
 
-If you're the child of a Saudi oil sheik, or a nepo baby paid a fortune to do nothing on the board of a Ukrainian gas company, then you're in luck, you can experience the state of the art right now. For the rest of us, however, GPT-4 is too expensive as anything but an occasional treat.
+如果你是沙特石油酋长的孩子，或者是乌克兰天然气公司董事会里拿着大把钞票却无所事事的小屁孩，那你就太幸运了，你现在就可以体验最先进的技术。但是对于我们这些普通人来说，GPT-4的价格太贵了，只能偶尔尝尝鲜。
 
-Also note that GPT-4 is still in preview access and you need to go on a waitlist. Most people get approved within a day, but naughty kids can end up waiting for weeks. You can sign up for it here: <https://openai.com/waitlist/gpt-4-api> . I'm not sure why some people are approved quickly while others are kept waiting. Try to sign up using an academic-sounding name instead of sktrboi99, it might help.
+另外要注意的是，GPT-4 仍处于预览阶段，您需要进入等待名单。大多数人在一天内就能获得批准，但运气不好可能要等上几个星期。你可以在这里注册： <https://openai.com/waitlist/gpt-4-api> 。我不清楚为什么有些人很快就能获得批准，而有些人却要一直等下去。尽量用一个听起来学术一些的名字注册，而不要用 sktrboi99，这样可能会有帮助。
 
-## Can this technology be used for sexooo?
+## 这项技术能用来搞颜色吗？
 
-Surprisingly, our development team has received reports that some users are indeed engaging with our product in this manner. We are as puzzled by this as you are, and will be monitoring the situation in order to gain actionable insights.
+令人惊讶的是，我们的开发团队收到报告称，一些用户确实在以这种方式使用我们的产品。我们和您一样对此感到困惑，并将对情况进行监控，以获得可行的见解。*（译者注：车轱辘话，机翻。）*
 
-## Give me an overview of my AI model options
+## 给我一个如何选择AI模型的概览。
 
-We can consider an AI model to be part of one of two groups:
+我们可以将AI模型视为两类：
 
-1. Web services (aka cloud, proprietary, closed)
-2. Self-hosted (aka local, free, open-source). Unlimited free use if you can run it.
+1. 网络服务（又称云服务、专有、封闭）
+2. 自托管（又称本地、免费、开源）。只要你能运行，就可以无限制地免费使用。
 
-Web models are black boxes. You're relying on some company's technology and servers, and paying them money for convenient access. Some require you to pay per use (per chatline), and others have a fixed monthly fee. The APIs are subject to various rules, they might refuse to roleplay in a way that goes against modern American sensibilities, and they log everything you do. However, it's much easier to get things started. This is like running Windows.
+网络模型是黑盒。你依赖于某些公司的技术和服务器，向他们支付费用以便访问API。有些公司要求按量付费（每条对话线），而有些公司按月付费。API受各种规则限制，他们可能会拒绝以违背现代人情感的方式进行角色扮演，而且他们会记录你所做的一切。不过这种方案更容易上手。类似使用 Windows 系统。
 
-Self-hosted models are free but require a powerful GPU and more work to set up. They are also objectively not as good at roleplaying as the paid options (yet). However, with a self-hosted model, you're completely in control. You won't have some limp-wristed soyboy from Silicon Valley ban your account, or program the model to be as sexless as he is. It's yours forever. This is like running Linux.
+自托管模型（自行部署）是免费的，但需要强大的GPU和更多的设置工作。客观地说，这些自托管模型在角色扮演方面也不如商业付费接口（至少目前来说）。不过对于自托管模式，你可以完全掌控。你不会被硅谷的某个软弱无能的娘炮封禁你的账户，也不会像他一样把模型编写得毫无性趣。它永远属于你。类似使用 Linux 系统。
 
-### Paid APIs
+### 需要付费的API
 
-* OpenAI GPT-4: state of the art. Allows NSFW if you tell it to, though somewhat resistant to it. You pay per use, more than any other service.
-* OpenAI GPT 3.5 Turbo: nowhere close to GPT-4, but some people find it serviceable. Allows NSFW.
-* NovelAI: they're quite poor at chatting. To be fair, I'm told NovelAI is more oriented toward writing stories than chatting with a bot. You pay a fixed monthly fee for unlimited generations.
-* Anthropic's Claude: this is the closest rival to GPT-4 and is very impressive. Allows NSFW if you tell it to, though they are trying hard to gimp it. To use the API directly, you must apply for early access, but I think they're only giving it to companies. So make sure you become a company or AI researcher when you apply at <https://console.anthropic.com/docs/access>. If you get access, it's currently free to use.
-* Anthropic's Claude Instant: Haven't tried it directly, but I believe this is the fast but lower-quality alternative to Claude. Basically the GPT 3.5 Turbo of Anthropic.
+* OpenAI GPT-4：最先进。尽管它有点抗拒，但是如果你要求，他还是允许NSFW的。按量付费，比其他服务都要贵。
+* OpenAI GPT 3.5 Turbo：远不如 GPT-4，但有人觉得他用起来也还可以。允许NSFW。
+* NovelAI：聊天功能很差。公平地说，我听说NovelAI更倾向于写故事，而不是与机器人聊天。按月付费，付费期间无限使用次数。
+* Anthropic's Claude：这是最接近 GPT-4 的对手，令人印象深刻。如果你要求，它允许NSFW，不过开发者正努力“优化”这一点。要直接使用API，你必须申请早期访问权限，但我认为他们只向公司开放。因此，在 <https://console.anthropic.com/docs/access> 申请时，请确保自己是公司或AI研究人员。如果你获得了访问权限，目前可以免费使用。
+* Anthropic's Claude Instant：我没有直接试用过，但我相信它是Claude的快速、低质量替代品。基本上可以认为是Anthropic家的GPT 3.5 Turbo。
 
-### Self-hosted AIs
+### 自托管模型
 
-Self-hosted AIs are supported in SillyTavern via one of two tools created to host self-hosted models: KoboldAI and Oobabooga's text-generation-webui. Essentially, you run one of those two backends, then they give you an API URL to enter in Tavern.
-Configuring these tools is beyond the scope of this FAQ, you should refer to their documentation. Beware that this is not easy.
+SillyTavern支持自己部署AI，有两种工具可用于托管自托管模型：KoboldAI 和 Oobabooga's text-generation-webui。本质上来说，你只需运行其中一个后端，然后它们就会给你提供一个 API URL，让你输入到 Tavern 中。
+配置这些工具的方法超出了本 FAQ 的范围，你应该参考它们的文档。请注意，自行部署模型对于无基础的人来说并不简单。
 
-Just know that you have 2 options:
+你需要了解以下两点：
 
-1. If you have a powerful NVIDIA GPU, you can try to run the AI locally on your PC. The weakest quasi-acceptable model, Pygmalion-6B, requires a GPU with 10GB VRAM, and I'm told it might even run on 6GB VRAM if quantized down. People with 24GB VRAM will be able to run better models.
-2. Otherwise, you can rent cloud resources. For example, you can try to use Google Colab. To access colabs capable of running the better models, you will need to pay for Colab Pro. You can also rent whole dedicated systems per hour on sites like LlambdaLabs or Vast.ai.
+1. 如果你有强大的英伟达显卡（NVIDIA显卡，简称N卡），可以尝试在电脑上本地运行AI。可接受的表现最差的模型 Pygmalion-6B 需要10GB显存（VRAM）的显卡，我听说如果量化下来，它甚至可以在6GB显存上运行。拥有24GB显存的用户可以运行更好的模型。*（译者注：实际一般都用量化模型。参数量越大的模型，量化后表现损失越小。7B量化模型最低8GB显存，13GB量化模型最低12G显存，33GB量化模型最低24G显存）*
+2. 此外，你可以租用云服务。例如，你可以尝试使用 Google Colab。要使用能运行更好模型的Colab，你需要支付Colab Pro的费用。您也可以在 LlambdaLabs 或 Vast.ai 等网站上按小时租用整个专用系统。*（译者注：国内可以尝试使用AutoDL租云GPU服务器）*
 
-## I'm clueless. Just spoonfeed me the easiest and fastest way I can start using this
+## 我毫无头绪。告诉我开始使用最简单快捷的方法。
 
-These base instructions are only for OpenAI, which is a paid service. I'd appreciate it if someone else can add separate instructions for the other services.
+这些基本说明仅适用于 OpenAI，这是一项付费服务。如果有人能为其他服务添加单独的说明，我将不胜感激。
 
-### Install SillyTavern
+### 安装 SillyTavern
 
-Follow the [Installation Instructions](https://docs.sillytavern.app/installation/windows/).
+详见 [安装说明](https://docs.sillytavern.app/installation/windows/).
 
-### Get access to OpenAI
+### 访问 OpenAI
 
 1. Sign up to OpenAI
 1. Go to <https://platform.openai.com>
@@ -101,7 +103,7 @@ Follow the [Installation Instructions](https://docs.sillytavern.app/installation
 
 While you're at it, join the GPT-4 waitlist at <https://openai.com/waitlist/gpt-4-api>
 
-### Configure SillyTavern to use your API
+### 配置 SillyTavern 以使用你的API
 
 1. In Tavern's top bar, click API Connections
 1. Under API, select OpenAI
@@ -109,7 +111,7 @@ While you're at it, join the GPT-4 waitlist at <https://openai.com/waitlist/gpt-
 1. Click the Connect button. Confirm it says Valid.
 1. By default, SillyTavern will use GPT 3.5 Turbo. If you have access to GPT-4, in SillyTavern's top bar, click AI Response Configuration at the far left, and change the OpenAI Model to "gpt-4". Enjoy the best, moneybags.
 
-### Test your setup
+### 测试部署效果
 
 1. In SillyTavern's top bar, click Character Management at the far right
 1. Select an existing character such as Aqua
@@ -117,13 +119,13 @@ While you're at it, join the GPT-4 waitlist at <https://openai.com/waitlist/gpt-
 
 If you did everything right, after a few seconds, Aqua should respond
 
-## Can I use SillyTavern on my phone or tablet?
+## 我可以在手机或平板电脑上使用 SillyTavern 吗？
 
 iPhones and iPads are not capable of running the whole SillyTavern app, but since it's just a web interface, you can run it on another computer on your home wifi, and then access in your mobile browser. Refer to <https://docs.sillytavern.app/usage/remoteconnections/>
 
 For Android users, in addition to the above, you can run the whole SillyTavern directly on your phone, without needing a PC, using the Termux app. Refer to <https://rentry.org/STAI-Termux> .
 
-## How can I download pre-made characters to chat with?
+## 如何下载预设的聊天角色？
 
 By using various 3rd party character-sharing websites.
 
@@ -137,14 +139,14 @@ Those websites provide you with an image file (called a character card) that emb
 
 Once you have the PNG/WEBP/JSON file, you can simply drag/drop it on top of the SillyTavern window in your browser tab, and the character will be imported to your list.
 
-## I tried to import a PNG character card but got an error that it's invalid. Why?
+## 我试图导入一张 PNG 角色卡，但却得到了一个 invalid 错误信息。为什么？
 
 Two possibilities:
 
 1. The card did not have the definitions embedded inside it and was just a normal image file. Some programs or file managers will strip the embedded definitions from the card when you save them. Make sure you're using the raw PNG file as it was posted by the person who shared it.
 2. The PNG file was actually a WEBP file with a `.png` filename. You can try renaming the card to `.webp` before importing, or look for a proper PNG version of the image.
 
-## How can I make my own AI character?
+## 如何制作自己的AI角色？
 
 It depends on the model/API you're using. KoboldAI seems to use a custom syntax, you can refer to their site for that.
 
@@ -177,7 +179,7 @@ Any relevant information you include can be used. How well it's used depends on 
 
 NOTE: you can go back and edit any of this information once the character is created, except the name.
 
-## Tell me all about GPT prompt editing
+## 告诉我如何编辑 GPT 提示词
 
 You can change the system prompt that SillyTavern transparently sends to GPT under AI Response Formatting at the left of the top bar. This will result in the bot acting differently.
 
@@ -185,7 +187,7 @@ You can get new Jailbreak / NSFW prompts from this community-maintained list: <h
 
 NOTE: When testing different system prompts, we recommend you use the Create Preset / Update Preset feature below the prompts, instead of modifying the base settings. This will allow you to change prompts easily, and even revert to the default SillyTavern prompts.
 
-## The AI is refusing to take the story in the direction I want
+## AI拒绝按照我想要的方向发展故事
 
 Most AI models were trained to resist writing NSFW content. Why? Long story short, it's because of the high levels of estrogen in the average California male.
 
@@ -211,7 +213,7 @@ Now click Regenerate, and the Bank Manager's line will be recreated based on the
 Bank Manager: Alright, alright, I'll open it! Please don't shoot! *He walks up to the vault and begins entering his unlock code.*
 ```
 
-## Where can I find the old backgrounds?
+## 在哪里可以找到旧版本的背景？
 
 We're moving to a 100% original content only policy, so old background images have been removed from this repository.
 
@@ -219,7 +221,7 @@ You can find them archived here:
 
 <https://files.catbox.moe/1xevnc.zip>
 
-## Where are my API keys stored? Why can't I see them?
+## 我的 API 密钥存储在哪里？为什么我看不到它们？
 
 SillyTavern saves your API keys to a `secrets.json` file in the server directory.
 
@@ -230,12 +232,12 @@ In order to enable viewing your keys by clicking a button in the API block:
 1. Set the value of `allowKeysExposure` to `true` in `config.conf` file.
 2. Restart the SillyTavern server.
 
-## Why is the UI so slow/jittery?
+## 为什么用户界面如此缓慢/抖动？
 
 * Try enabling the No Blur Effect (Fast UI) mode on the User settings panel.
 * make sure your browser is using Hardware Acceleration.
 
-## How to make the AI write more?
+## 如何让AI回复内容更长？
 
 Sometimes the AI will only respond with a single sentence when you'd like it to be more verbose.
 This is usually a problem with locally run models like Pygmalion.
@@ -250,7 +252,7 @@ Strategies for fixing this:
 * Do the same thing for your `Author's Note`, or `Jailbreak Prompt for OAI/Claude`
 * As a last resort, you can try turning on `Multigen` (in the User Settings panel), but will make responses come out slower because it's making the AI produce small replies back to back, and then combining them all together into one big reply. It may also be incompatible with some API options.
 
-## How to make the AI write less?
+## 如何让AI回复内容更短？
 
 This is mostly only a problem for models like ChatGPT or Claude. The same strategies can be applied but in reverse.
 
@@ -259,10 +261,12 @@ This is mostly only a problem for models like ChatGPT or Claude. The same strate
 * give the character a brief First Message to set the tone and expectation for the chat.
 * make sure `Multigen` is turned off.
 
-## How to make the AI stop writing the actions of my character, and driving the plot all on its own?
+## 如何让AI停止编写我的角色的行动、停止独自推动情节发展？
 
-This should be handled in the `Author's Note` with a combination of phrases like:
+这可以在“作者注释”（Author's Note）功能中用类似这样的短语来处理：
 
 * \{\{char\}\}'s responses shall only be passive and reactive to \{\{user\}\}'s actions.
 * Your next response shall be solely from the POV of \{\{char\}\}.
 * You are never allowed to dictate actions of speech for \{\{user\}\}
+
+*（译者注：作者注释是一个非常好用的功能，可以快速引导对话，提示上下文，修正AI的错误认知等。）*
