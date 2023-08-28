@@ -1,4 +1,4 @@
-# SillyTavern是什么？
+# SillyTavern 是什么？
 
 ![](https://github.com/Cohee1207/SillyTavern/assets/18619528/8c41a061-7f72-4d2b-9d54-e6d058209e7b)
 
@@ -16,7 +16,7 @@ SillyTavern 于2023年2月基于 TavernAI 1.2.8 版本修改而来，此后引�
 
 SillyTavern 采用双分支系统来确保给所有用户带来一个丝滑的体验，
 
-* 发行版 -🌟 **适用于大部分用户.** 这是我们最稳定也是最推荐的版本, 只有当重大更新发布时才更新。 它适用于大部分用户。
+* 发行版 -🌟 **适用于大部分用户。** 这是我们最稳定也是最推荐的版本, 只有当重大更新发布时才更新。 它适用于大部分用户。
 * staging - ⚠️ **Not recommended for casual use.** This branch has the latest features, but be cautious as it may break at any time. Only for power users and enthusiasts.
 
 Learn more [here](https://docs.sillytavern.app/usage/branches/).
