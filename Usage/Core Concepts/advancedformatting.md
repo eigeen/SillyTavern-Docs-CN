@@ -12,7 +12,7 @@
 
 #### Story string
 
-此字段是聊天前角色数据（内部称为 story string）的模板。
+此字段是对话前角色数据（内部称为 story string）的模板。
 这是为文本补全和指示模型而格式化角色卡的主要方式。
 
 该模板支持 Handlebars 语法和任何自定义文本注入或格式化。请参见此处的语言参考：https://handlebarsjs.com/guide/
@@ -70,7 +70,7 @@ SillyTavern 提供了一个“最佳匹配”选项，它会根据所使用的 A
 6. NerdStash v2 tokenizer。由 NovelAI 的 Kayra 模型使用。**如果使用 Kayra 模型，请选择**。
 7. API tokenizer。通过调用查询 API，直接从模型中获取词元计数。只有 Oobabooga's TextGen 支持。**如果使用最新版本的 TextGen API，请选择**。
 
-聊天补全 API **（不可覆盖）**：
+对话补全 API **（不可覆盖）**：
 1. OpenAI / Claude / OpenRouter / Window：通过 [tiktoken](https://github.com/openai/tiktoken) 计算取决于模型的词元。
 2. Scale API： GPT-4 tokenizer。
 3. Fallback tokenizer（用于代理）：GPT-3.5 turbo tokenizer。
@@ -83,7 +83,7 @@ SillyTavern 无法使用在 KoboldAI 或 Oobabooga's TextGen 远程实例上运�
 
 由于 tokenization 的结果在上下文大小接近模型定义的最大值时可能会不准确，提示符的某些部分可能会被截断或删除，这可能会对角色设定的一致性产生负面影响。
 
-为避免出现这种情况，SillyTavern 会分配一部分上下文大小作为填充，以避免添加的聊天内容超过模型所能容纳的范围。如果你发现即使选择了最匹配的 tokenizer，提示词的某些部分也会被截断，那么请调整填充，这样描述就不会被截断。
+为避免出现这种情况，SillyTavern 会分配一部分上下文大小作为填充，以避免添加的对话内容超过模型所能容纳的范围。如果你发现即使选择了最匹配的 tokenizer，提示词的某些部分也会被截断，那么请调整填充，这样描述就不会被截断。
 
 您可以为反向填充输入负值，这样就可以分配比设定的最大词元还要多。
 

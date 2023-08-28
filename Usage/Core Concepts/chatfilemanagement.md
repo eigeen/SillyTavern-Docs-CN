@@ -1,14 +1,14 @@
-# 聊天文件管理
+# 对话文件管理
 
-本页介绍了管理 AI 聊天文件的方法。
+本页介绍了管理 AI 对话文件的方法。
 
-### 单人聊天
+### 单人对话
 
-#### 导入聊天
+#### 导入对话
 
-**将聊天导入 SillyTavern**
+**将对话导入 SillyTavern**
 
-要导入 Character.AI 的聊天，用这个工具：[https://github.com/0x000011b/characterai-dumper](https://github.com/0x000011b/characterai-dumper).
+要导入 Character.AI 的对话，用这个工具：[https://github.com/0x000011b/characterai-dumper](https://github.com/0x000011b/characterai-dumper).
 
 ### 群聊
 
@@ -16,10 +16,10 @@
 
 ### 书签
 
-### 重命名聊天
+### 重命名对话
 
-默认情况下，聊天文件会以开始的日期和时间命名。
+默认情况下，对话文件会以开始的日期和时间命名。
 
 你可以单击铅笔图标并输入新名称来更改。
 
-这将破坏与该聊天相关的书签之间的链接。
+这将破坏与该对话相关的书签之间的链接。
