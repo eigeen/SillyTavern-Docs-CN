@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746555656183">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746555921374">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
@@ -30,11 +30,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.2.0.746555656183" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.2.0.746555921374" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.2.0.746555656183" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.2.0.746555921374" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.2.0.746555656183" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.2.0.746555921374" data-turbo-eval="false" defer></script>
 
     <Style>
         a {
@@ -267,7 +267,7 @@
 <td>Pending</td>
 </tr>
 <tr>
-<td>智能上下文<br> (Smart Context) <br><br>*无限上下文/对象持久化  (Infinity Context / Object Permanence) *</td>
+<td>智能上下文<br> (Smart Context) <br><br><em>无限上下文/对象持久化<br> (Infinity Context / Object Permanence)</em></td>
 <td><strong>它不可以：</strong> 神奇地增加上下文大小。<br><strong>它可以：</strong> 优化上下文空间中历史消息的排序，以便更有效地使用。<br><br>设想两个变量：<br>X: 保留多少条原始对话消息<br>Y: 注入 ChromaDB “记忆”的最大数量<br><br>当对话消息达到 X 的阈值时，其他消息将不再按时间顺序包含在上下文中。相反，我们会根据这些消息与你最近输入内容的相似度 (最多不超过 Y) 从历史记录中挑选出这些消息，这应该会比直接忽略更旧的消息提供更多相关信息。请根据上下文条目的平均数量调整这些值，以获得最佳性能。</td>
 <td><code v-pre>chromadb</code></td>
 <td>Pending</td>
