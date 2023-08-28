@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746466020881">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746552690020">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
@@ -30,11 +30,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.2.0.746466020881" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.2.0.746552690020" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746466020881" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746552690020" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746466020881" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746552690020" data-turbo-eval="false" defer></script>
 
     <Style>
         a {
@@ -217,7 +217,7 @@
         <span>Story string</span>
     </h4>
 </doc-anchor-target>
-<p>此字段是聊天前角色数据（内部称为 story string）的模板。
+<p>此字段是对话前角色数据（内部称为 story string）的模板。
 这是为文本补全和指示模型而格式化角色卡的主要方式。</p>
 <p>该模板支持 Handlebars 语法和任何自定义文本注入或格式化。请参见此处的语言参考：https://handlebarsjs.com/guide/</p>
 <p>我们为 Handlebars evaluator 提供了以下参数（将它们置于双花括号中）：</p>
@@ -283,7 +283,7 @@ Character:</code></pre>
 <li>NerdStash v2 tokenizer。由 NovelAI 的 Kayra 模型使用。<strong>如果使用 Kayra 模型，请选择</strong>。</li>
 <li>API tokenizer。通过调用查询 API，直接从模型中获取词元计数。只有 Oobabooga&#x27;s TextGen 支持。<strong>如果使用最新版本的 TextGen API，请选择</strong>。</li>
 </ol>
-<p>聊天补全 API <strong>（不可覆盖）</strong>：</p>
+<p>对话补全 API <strong>（不可覆盖）</strong>：</p>
 <ol>
 <li>OpenAI / Claude / OpenRouter / Window：通过 <a href="https://github.com/openai/tiktoken">tiktoken</a> 计算取决于模型的词元。</li>
 <li>Scale API： GPT-4 tokenizer。</li>
@@ -298,7 +298,7 @@ Character:</code></pre>
 <p><strong>重要：本部分不适用于 OpenAI API。SillyTavern 将始终为 OpenAI 模型使用匹配的分词器。</strong></p>
 <p>SillyTavern 无法使用在 KoboldAI 或 Oobabooga&#x27;s TextGen 远程实例上运行的模型所提供的恰当的 tokenizer，因此在生成提示词时假定所有词元数量都是根据所选的 <doc-anchor-trigger to="#%E5%88%86%E8%AF%8D%E5%99%A8">分词器</doc-anchor-trigger> 类型估算的。</p>
 <p>由于 tokenization 的结果在上下文大小接近模型定义的最大值时可能会不准确，提示符的某些部分可能会被截断或删除，这可能会对角色设定的一致性产生负面影响。</p>
-<p>为避免出现这种情况，SillyTavern 会分配一部分上下文大小作为填充，以避免添加的聊天内容超过模型所能容纳的范围。如果你发现即使选择了最匹配的 tokenizer，提示词的某些部分也会被截断，那么请调整填充，这样描述就不会被截断。</p>
+<p>为避免出现这种情况，SillyTavern 会分配一部分上下文大小作为填充，以避免添加的对话内容超过模型所能容纳的范围。如果你发现即使选择了最匹配的 tokenizer，提示词的某些部分也会被截断，那么请调整填充，这样描述就不会被截断。</p>
 <p>您可以为反向填充输入负值，这样就可以分配比设定的最大词元还要多。</p>
 <doc-anchor-target id="自定义停止字符串">
     <h2>

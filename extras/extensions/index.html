@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746466020881">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746552690020">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
 
     <!-- Primary Meta Tags -->
-    <title>Extensions | SillyTavern中文文档</title>
-    <meta name="title" content="Extensions | SillyTavern中文文档">
-    <meta name="description" content="Name">
+    <title>扩展插件 | SillyTavern中文文档</title>
+    <meta name="title" content="扩展插件 | SillyTavern中文文档">
+    <meta name="description" content="名称">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.eigeen.cc/extras/extensions/">
@@ -19,22 +19,22 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.eigeen.cc/extras/extensions/">
-    <meta property="og:title" content="Extensions | SillyTavern中文文档">
-    <meta property="og:description" content="Name">
+    <meta property="og:title" content="扩展插件 | SillyTavern中文文档">
+    <meta property="og:description" content="名称">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://docs.eigeen.cc/extras/extensions/">
-    <meta property="twitter:title" content="Extensions | SillyTavern中文文档">
-    <meta property="twitter:description" content="Name">
+    <meta property="twitter:title" content="扩展插件 | SillyTavern中文文档">
+    <meta property="twitter:description" content="名称">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.2.0.746466020881" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.2.0.746552690020" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.2.0.746466020881" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.2.0.746552690020" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.2.0.746466020881" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.2.0.746552690020" data-turbo-eval="false" defer></script>
 
     <Style>
         a {
@@ -195,86 +195,86 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="extensions" class="break-words">
+<doc-anchor-target id="扩展插件" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#extensions">#</doc-anchor-trigger>
-        <span>Extensions</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#扩展插件">#</doc-anchor-trigger>
+        <span>扩展插件</span>
     </h1>
 </doc-anchor-target>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
 <tr>
-<th>Name</th>
-<th>Description</th>
-<th>Required <a href="https://github.com/Cohee1207/TavernAI-extras#modules" target="_blank">Extra Modules</a></th>
-<th>Screenshot</th>
+<th>名称</th>
+<th>描述</th>
+<th>是否需要 <a href="https://github.com/Cohee1207/TavernAI-extras#modules" target="_blank">附加模块</a></th>
+<th>截图</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Image Captioning</td>
-<td>Send a cute picture to your bot!<br><br>Picture select option will appear beside the &quot;Message send&quot; button.</td>
+<td>图像说明 （Image Captioning）</td>
+<td>向你的机器人发送图片！<br><br>选择图片的选项将出现在“发送消息”按钮旁边。</td>
 <td><code v-pre>caption</code></td>
 <td><img src="https://user-images.githubusercontent.com/18619528/224161576-ddfc51cd-995e-44ec-bf2d-d2477d603f0c.png" style="max-width:200px" /></td>
 </tr>
 <tr>
-<td>Character Expressions</td>
-<td>See your character reacting to your messages!<br><br><strong>You need to provide your own character images!</strong><br><br>1. Create a folder in TavernAI called <code v-pre>public/characters/&lt;name&gt;</code>, where <code v-pre>&lt;name&gt;</code> is the name of your character.<br>2. For the base emotion classification model, put six PNG files there with the following names: <code v-pre>joy.png</code>, <code v-pre>anger.png</code>, <code v-pre>fear.png</code>, <code v-pre>love.png</code>, <code v-pre>sadness.png</code>, <code v-pre>surprise.png</code>. Other models may provide other options.<br>3. Images only display in desktop mode.</td>
+<td>角色表情 （Character Expressions）</td>
+<td>可视化你的角色对你的消息做出的反应。<br><br><strong>你需要先提供自己的角色图片！</strong><br><br>1. 在 TavernAI 中创建一个名为 <code v-pre>public/characters/&lt;name&gt;</code> 的目录，其中 <code v-pre>&lt;name&gt;</code> 是你爹角色名称。<br>2. 对于基本情感分类模型，在该目录中放入六个 PNG 文件，文件名如下：<code v-pre>joy.png</code>, <code v-pre>anger.png</code>, <code v-pre>fear.png</code>, <code v-pre>love.png</code>, <code v-pre>sadness.png</code>, <code v-pre>surprise.png</code>。其他分类模型可能会提供更多选项。<br>3. 图片只能在桌面模式下显示。</td>
 <td><code v-pre>classify</code></td>
 <td><img style="max-width:200px" alt="image" src="https://user-images.githubusercontent.com/18619528/223765089-34968217-6862-47e0-85da-7357370f8de6.png"></td>
 </tr>
 <tr>
-<td>Memory</td>
-<td>Chatbot long-term memory simulation using automatic message context summarization.</td>
+<td>记忆 （Memory）</td>
+<td>利用自动上下文消息摘要，模拟对话机器人的长期记忆。</td>
 <td><code v-pre>summarize</code></td>
 <td><img style="max-width:200px" alt="image" src="https://user-images.githubusercontent.com/18619528/223766279-88a46481-1fa6-40c5-9724-6cdd6f587233.png"></td>
 </tr>
 <tr>
-<td>D&amp;D Dice</td>
-<td>A set of 7 classic D&amp;D dice for all your dice rolling needs.<br><br><em>I used to roll the dice.<br>Feel the fear in my enemies&#x27; eyes</em></td>
-<td>None</td>
+<td>DND 骰子 （D&amp;D Dice）</td>
+<td>提供7种经典的 D&amp;D 骰子，满足你掷骰子的需求。<br><br><em>我曾掷骰处置败敌。<br>享受着他眼中的恐惧</em></td>
+<td>无</td>
 <td><img style="max-width:200px" alt="image" src="https://user-images.githubusercontent.com/18619528/226199925-a066c6fc-745e-4a2b-9203-1cbffa481b14.png"></td>
 </tr>
 <tr>
-<td>Character Backgrounds</td>
-<td>Built-in extension to assign unique backgrounds to specific chats or groups.</td>
-<td>None</td>
+<td>角色背景 （Character Backgrounds）</td>
+<td>内置扩展功能，可为特定对话或群组分配独有的背景。</td>
+<td>无</td>
 <td><img style="max-width:200px" alt="image" src="https://user-images.githubusercontent.com/18619528/233494454-bfa7c9c7-4faa-4d97-9c69-628fd96edd92.png"></td>
 </tr>
 <tr>
 <td>Stable Diffusion</td>
-<td>Use local of cloud-based Stable Diffusion webUI API to generate images. 5 presets included (&#x27;you&#x27;, &#x27;your face&#x27;, &#x27;me&#x27;, &#x27;the story&#x27;, and &#x27;the last message&#x27;. Free mode also supported via <code v-pre>/sd (anything_here_)</code> command in the chat input bar. Most common StableDiffusion generation settings are customizable within the SillyTavern UI.</td>
-<td>None</td>
+<td>使用本地基于云的 Stable Diffusion webUI API 生成图像。包含 5 种预设（&#x27;you&#x27;, &#x27;your face&#x27;, &#x27;me&#x27;, &#x27;the story&#x27; 和 &#x27;the last message&#x27;）。也支持在对话输入框中使用 <code v-pre>/sd (任意内容)</code> 自由生成。大多数常用的 StableDiffusion 生成设置都可在 SillyTavern UI 中自定义。</td>
+<td>无</td>
 <td><img style="max-width:200px" alt="image" src="https://files.catbox.moe/ppata8.png"></td>
 </tr>
 <tr>
-<td>Text-to-Speech</td>
-<td>AI-generated voice will read back character messages on demand, or automatically read new messages they arrive. Supports ElevenLabs, Silero, Coqui-TTS, and your device&#x27;s TTS service.</td>
-<td>None</td>
+<td>文本转语音 （Text-to-Speech）</td>
+<td>可以让AI根据文本生成朗读语音，也可以设置自动朗读收到的新消息。支持 ElevenLabs、Silero、Coqui-TTS 和你设备上已有的 TTS 服务。</td>
+<td>无</td>
 <td><img style="max-width:200px" alt="image" src="https://files.catbox.moe/o3wxkk.png"></td>
 </tr>
 <tr>
-<td>Chat Translation</td>
-<td>Automatically translates incoming and/or outgoing messages into the chosen language.</td>
-<td>None</td>
+<td>对话翻译 （Chat Translation）</td>
+<td>自动将接收或发送的消息（或二者同时）翻译成所选语言。</td>
+<td>无</td>
 <td>Pending</td>
 </tr>
 <tr>
-<td>Token Counter</td>
-<td>Simple way to calculate the number of tokens in any text with selected tokenizer.</td>
-<td>None</td>
+<td>词元计数器 （Token Counter）</td>
+<td>一种使用自定义的分词器计算某一段文本中词元数量的简单方法。</td>
+<td>无</td>
 <td>Pending</td>
 </tr>
 <tr>
-<td>Smart Context<br><br><em>Infinity Context / Object Permanence</em></td>
-<td><strong>What it doesn&#x27;t do:</strong> Magically increase your context size.<br><strong>What it does:</strong> Optimizes the arrangement of your message history within the context space for more effective use.<br><br>Imagine two variables:<br>X: How many original chat messages to keep<br>Y: Maximum number of ChromaDB &#x27;memories&#x27; to inject<br><br>When the chat reaches the threshold of X messages, additional messages will no longer be included in the context chronologically. Instead, they will be selected from the history based on their similarity to your recent inputs (limited to a maximum of Y), which should provide more relevant information than simply disregarding past messages. Adjust these values according to your average number of in-context entries for optimal performance.</td>
+<td>智能上下文 （Smart Context）<br><br><em>无限上下文/对象持久化 （Infinity Context / Object Permanence）</em></td>
+<td><strong>它不可以：</strong> 神奇地增加上下文大小。<br><strong>它可以：</strong> 优化上下文空间中历史消息的排序，以便更有效地使用。<br><br>设想两个变量：<br>X: 保留多少条原始对话消息<br>Y: 注入 ChromaDB “记忆”的最大数量<br><br>当对话消息达到 X 的阈值时，其他消息将不再按时间顺序包含在上下文中。相反，我们会根据这些消息与你最近输入内容的相似度（最多不超过 Y）从历史记录中挑选出这些消息，这应该会比直接忽略更旧的消息提供更多相关信息。请根据上下文条目的平均数量调整这些值，以获得最佳性能。</td>
 <td><code v-pre>chromadb</code></td>
 <td>Pending</td>
 </tr>
 <tr>
-<td>talkinghead</td>
-<td>An implementation of <a href="https://github.com/miketako3/talking-head-anime-3-demo-for-aituber">https://github.com/miketako3/talking-head-anime-3-demo-for-aituber</a> for Silly Tavern. Uses an expression called talkinghead.png in the expressions folder of the character for loading. The image must meet specfic requirements, see screenshot.</td>
+<td>自动生成口型 （talkinghead）</td>
+<td>SillyTavern 中对于 <a href="https://github.com/miketako3/talking-head-anime-3-demo-for-aituber">https://github.com/miketako3/talking-head-anime-3-demo-for-aituber</a> 的一种实现。Uses an expression called talkinghead.png in the expressions folder of the character for loading. The image must meet specfic requirements, see screenshot.</td>
 <td><code v-pre>talkinghead</code></td>
 <td><img style="max-width:200px" alt="image" src="https://github.com/miketako3/talking-head-anime-3-demo-for-aituber/blob/main/docs/input_spec.png?raw=true"></td>
 </tr>
@@ -353,6 +353,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Extensions", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "扩展插件", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>

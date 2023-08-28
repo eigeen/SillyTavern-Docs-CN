@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746466020881">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746552690020">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
@@ -30,11 +30,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.2.0.746466020881" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.2.0.746552690020" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746466020881" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746552690020" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746466020881" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746552690020" data-turbo-eval="false" defer></script>
 
     <Style>
         a {
@@ -230,7 +230,7 @@
     </h3>
 </doc-anchor-target>
 <p><strong>假设你使用的AI模型限制上下文最多输入 2048 个词元（Token），如果你设定的角色设定包含了 1000 个词元，就相当于将AI的“记忆”削减了一半。</strong></p>
-<p>从这个角度来看，一个表现优秀的AI做出一个像样的回复很容易就会占用 200-300 个词元。在这种情况下，AI只能“记住”大约 3 次聊天记录。</p>
+<p>从这个角度来看，一个表现优秀的AI做出一个像样的回复很容易就会占用 200-300 个词元。在这种情况下，AI只能“记住”大约 3 次对话记录。</p>
 <hr>
 <doc-anchor-target id="为什么我的角色词元计数器变成红色了">
     <h3>
@@ -246,7 +246,7 @@
     </h3>
 </doc-anchor-target>
 <p>首先别慌，这不会造成破坏性问题。在最坏的情况下，如果角色的永久词元过大，只是表示上下文中留给其他事情的空间减少了（见下文）。</p>
-<p>这样做唯一的负面影响就是AI的“记忆”会减少，因为它可以处理的聊天记录会减少。</p>
+<p>这样做唯一的负面影响就是AI的“记忆”会减少，因为它可以处理的对话记录会减少。</p>
 <p>这是因为每个AI模型一次能处理的上下文数量都是有限的。</p>
 <doc-anchor-target id="上下文context">
     <h3>
@@ -257,7 +257,7 @@
 <p>每次要求AI生成回复时，这些信息都会发送给AI：</p>
 <ul>
 <li>角色设定</li>
-<li>聊天记录</li>
+<li>对话记录</li>
 <li>作者注释</li>
 <li>特殊格式化字符串</li>
 <li>[括号命令]</li>
@@ -283,8 +283,8 @@
     </h3>
 </doc-anchor-target>
 <ul>
-<li>第一条消息——只在聊天开始时发送一次。</li>
-<li>对话示例——只保留到聊天历史填满上下文（可选择强制保留在上下文中）</li>
+<li>第一条消息——只在对话开始时发送一次。</li>
+<li>对话示例——只保留到对话历史填满上下文（可选择强制保留在上下文中）</li>
 </ul>
 <doc-anchor-target id="常用的ai模型上下文词元限制">
     <h3>
@@ -320,7 +320,7 @@
     </h3>
 </doc-anchor-target>
 <p>第一条信息很重要，它决定角色的交流方式和风格。</p>
-<p>角色的第一条信息应该尽量长，这样之后的聊天就不太可能用很短的信息来回应。</p>
+<p>角色的第一条信息应该尽量长，这样之后的对话就不太可能用很短的信息来回应。</p>
 <p>您还可以使用星号 ** 来描述人物的行为。</p>
 <p>例如：</p>
 <p><code v-pre>*I noticed you came inside, I walked up and stood right in front of you* Welcome. I'm glad to see you here. *I said with a toothy smug sunny smile looking you straight in the eye* What brings you...</code></p>
@@ -394,7 +394,7 @@
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">聊天文件管理</span>
+                                                <span class="block mt-1">对话文件管理</span>
                                             </span>
                                         </a>
                                     </div>

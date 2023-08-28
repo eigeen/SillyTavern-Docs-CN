@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746466020881">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746552690020">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.2.0">
@@ -32,11 +32,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.2.0.746466020881" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.2.0.746552690020" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746466020881" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746552690020" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746466020881" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746552690020" data-turbo-eval="false" defer></script>
 
     <Style>
         a {
@@ -216,7 +216,7 @@
         <span>用法</span>
     </h3>
 </doc-anchor-target>
-<p>作者注释可在聊天输入栏左侧的选项菜单中找到。</p>
+<p>作者注释可在对话输入栏左侧的选项菜单中找到。</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -239,14 +239,14 @@
         <span>配置作者注释</span>
     </h3>
 </doc-anchor-target>
-<doc-anchor-target id="特定聊天的作者注释">
+<doc-anchor-target id="特定对话的作者注释">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#特定聊天的作者注释">#</doc-anchor-trigger>
-        <span>特定聊天的作者注释</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#特定对话的作者注释">#</doc-anchor-trigger>
+        <span>特定对话的作者注释</span>
     </h4>
 </doc-anchor-target>
-<p>作者注释面板的最上方输入框包含当前聊天所使用的作者注释。</p>
-<p><strong>此输入框的内容不会自动转移到新的聊天内容中。</strong></p>
+<p>作者注释面板的最上方输入框包含当前对话所使用的作者注释。</p>
+<p><strong>此输入框的内容不会自动转移到新的对话内容中。</strong></p>
 <doc-anchor-target id="插入选项">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#插入选项">#</doc-anchor-trigger>
@@ -260,15 +260,15 @@
     </h4>
 </doc-anchor-target>
 <p>此选项将会把作者注释放在上下文的顶部，即角色定义的“场景”（Scenario）部分之后。如果没有指定场景，则会放在角色定义之后，对话示例之前。</p>
-<doc-anchor-target id="聊天内">
+<doc-anchor-target id="对话内">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#聊天内">#</doc-anchor-trigger>
-        <span>聊天内</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#对话内">#</doc-anchor-trigger>
+        <span>对话内</span>
     </h4>
 </doc-anchor-target>
-<p>此选项将会把作者注释放在指定深度的聊天记录中。</p>
-<p>深度 0 = 放在聊天历史的最末端。</p>
-<p>深度 4 = 放在最近 3 条聊天记录之前，使其成为聊天记录中的第 4 项。</p>
+<p>此选项将会把作者注释放在指定深度的对话记录中。</p>
+<p>深度 0 = 放在对话历史的最末端。</p>
+<p>深度 4 = 放在最近 3 条对话记录之前，使其成为对话记录中的第 4 项。</p>
 <p><em>作者注释离提示底部越近，对下一次AI回复的影响就越大。</em></p>
 <doc-anchor-target id="插入频率">
     <h3>
@@ -276,7 +276,7 @@
         <span>插入频率</span>
     </h3>
 </doc-anchor-target>
-<p>此选项设置聊天中包含作者注释的频率。</p>
+<p>此选项设置对话中包含作者注释的频率。</p>
 <p>频率 0 = 不插入作者注释。</p>
 <p>频率 1 = 每次用户输入提示词时都会插入作者注释。</p>
 <p>频率 4 = 用户每输入 4 次提示词，插入 1 次作者注释。</p>
@@ -286,8 +286,8 @@
         <span>默认作者注释</span>
     </h3>
 </doc-anchor-target>
-<p>面板底部的方框包含默认作者注释，该注释将应用于每个新聊天。
-作者注释面板的最底部输入框包含默认作者注释，该注释将应用于每一个新聊天。</p>
+<p>面板底部的方框包含默认作者注释，该注释将应用于每个新对话。
+作者注释面板的最底部输入框包含默认作者注释，该注释将应用于每一个新对话。</p>
 <doc-anchor-target id="常见用例">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#常见用例">#</doc-anchor-trigger>
@@ -315,10 +315,10 @@
 <ul>
 <li>[Remember the agreement we made at the beginning of this chat.]</li>
 </ul>
-<doc-anchor-target id="作为临时的世界信息角色聊天偏向或对非指示型模型进行指示">
+<doc-anchor-target id="作为临时的世界信息角色对话偏向或对非指示型模型进行指示">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#作为临时的世界信息角色聊天偏向或对非指示型模型进行指示">#</doc-anchor-trigger>
-        <span>作为临时的世界信息、角色聊天偏向或对非指示型模型进行指示。</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#作为临时的世界信息角色对话偏向或对非指示型模型进行指示">#</doc-anchor-trigger>
+        <span>作为临时的世界信息、角色对话偏向或对非指示型模型进行指示。</span>
     </h4>
 </doc-anchor-target>
 <ul>
@@ -354,7 +354,7 @@
                                         <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../usage/core-concepts/chatfilemanagement/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">聊天文件管理</span>
+                                                <span class="block mt-1">对话文件管理</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
