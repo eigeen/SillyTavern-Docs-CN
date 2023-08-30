@@ -5,11 +5,11 @@ label: Windows
 # Windows 安装
 
 !!!警告
-不要安装到任何Windows直接控制的文件夹（Program Files, System32等）。
+不要安装到任何 Windows 直接控制的文件夹（Program Files, System32 等）。
 
-不要以管理员权限运行start.bat。
+不要以管理员权限运行 start.bat。
 
-由于Windows 7不支持NodeJS v18.16，因此无法在Windows 7上安装SillyTavern。
+由于 Windows 7 不支持 NodeJS v18.16，因此无法在 Windows 7 上安装 SillyTavern。
 !!!
 
 ## 通过 GitHub Desktop 安装（最简便）
@@ -53,7 +53,7 @@ label: Windows
   7. Once everything is cloned, double click `Start.bat` to make NodeJS install its requirements.
   8. The server will then start, and SillyTavern will popup in your browser.
 
-## 通过下载zip压缩包安装（不推荐）
+## 通过下载 zip 压缩包安装（不推荐）
 
   1. Install [NodeJS](https://nodejs.org/en) (latest LTS version is recommended)
   2. Download the zip from this GitHub repo. (Get the `Source code (zip)` from [Releases](https://github.com/SillyTavern/SillyTavern/releases/latest))

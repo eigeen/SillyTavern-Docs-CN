@@ -1,85 +1,85 @@
-# World Info
+# 世界信息 (World Info)
 
-**World Info (also known as Lorebooks or Memory Books) enhances AI's understanding of the details in your world.**
+**世界信息（又称 Lorebooks 或 Memory Books）可增强AI对世界细节的理解。**
 
-It functions like a dynamic dictionary that only inserts relevant information from World Info entries when keywords associated with the entries are present in the message text.
+它的功能就像一个动态字典，只有当消息文本中出现与世界信息条目相关的关键字时，才会插入这些条目的相关信息。
 
-The SillyTavern engine activates and seamlessly integrates the appropriate lore into the prompt, providing background information to the AI.
+SillyTavern 引擎会激活并将适当的 Lore 无缝整合到提示词中，为AI提供背景信息。
 
-*It is important to note that while World Info helps guide the AI toward your desired lore, it does not guarantee its appearance in the generated output messages.*
+*需要注意，虽然世界信息有助于引导AI找到你期望的 Lore，但并不保证其会出现在生成的输出消息中。*
 
-### Pro Tips
+### 进阶提示
 
-* The AI does not insert keywords into context, so each World Info entry should be a comprehensive, standalone description.
-* To create rich and detailed world lore, entries can be interlinked and reference one another.
-* To conserve tokens, it is advisable to keep entry contents concise, with a generally recommended limit of 50 tokens per entry.
+* AI 不会在上下文中插入触发关键词，因此每个世界信息条目都应是全面、独立的描述。
+* 为了创建丰富详尽的世界传说（world lore），条目之间可以相互链接和参考。
+* 为了节约词元，条目内容最好简洁明了，一般建议每个条目不超过 50 个词元。
 
-## Character Lore
+## 角色 Lore (Character Lore)
 
-Optionally, one World Info file could be assigned to a character to serve as a dedicated lore source across all chats with that character (including groups).
+可以选择将一个世界信息文件分配给一个角色，作为该角色所有聊天（包括群组）的专用 Lore 源。
 
-To do that, navigate to a Character Management panel and click a globe button, then pick World Info from a dropdown list and click "Ok".
+要做到这一点，请导航到“角色管理”面板并单击“地球仪”按钮，然后从下拉列表中选择“世界信息”并单击“确定”。
 
-### Character Lore Insertion Strategy
+### 角色 Lore 插入策略
 
-When generating an AI reply, entries from the character World Info will be combined with the entries from a global World Info selector using one of the following strategies:
+在生成AI回复时，角色世界信息中的条目将与全局世界信息选择器中的条目相结合，具体方式如下：
 
-#### Sorted Evenly (default)
+#### 均匀排序（默认）
 
-All entries will be sorted according to their Insertion Order as if they a part of one big file, ignoring the source.
+所有条目将根据插入顺序排序，就像它们是一个大文件的一部分而忽略源文件。
 
-#### Character Lore First
+#### 角色 Lore 优先
 
-Entries from the Character World Info would be included first by their Insertion Order, then entries from the Global World Info.
+角色世界信息中的条目将首先包含在内。并根据插入顺序排序，然后再包含全球世界信息中的条目。
 
-#### Global Lore First
+#### 全局 Lore 优先
 
-Entries from the Global World Info Info would be included first by their Insertion Order, then entries from the Character World Info.
+全局世界信息中的条目将首先包含在内。并根据插入顺序排序，然后再包含角色世界信息中的条目。
 
-### World Info Entry
+### 世界信息条目
 
-#### Key
+#### 关键字
 
-A list of keywords that trigger the activation of a World Info entry. Keys are not case-sensitive by default (this is [configurable](#casesensitivekeys)).
+用于触发激活世界信息条目的关键字列表。默认情况下，关键字不区分大小写（这是 [可配置的](#casesensitivekeys)）。
 
-#### Secondary Key
+#### 次要关键字
 
-A list of supplementary keywords that are used in conjunction with the main keywords. See [Selective](#selective).
+用于与主关键字一起使用的补充关键字列表。请参阅 [选择性](#selective)。
 
-#### Entry Content
+#### 条目内容
 
-The text that is inserted into the prompt upon entry activation.
+当条目激活时，插入提示词的文本。
 
-#### Insertion Order
+#### 插入排序
 
-Numeric value. Defines a priority of the entry if multiple were activated at once. Entries with higher order numbers will be inserted closer to the end of the context as they will have more impact on the output.
+数值。定义同时激活多个条目的优先级。排序值较高的条目将被插入到更靠近上下文末尾的位置，因为它们对输出的影响更大。
 
-#### Insertion Position
+#### 插入位置
 
-* **Before Chara:** World Info entry is inserted before the character's description and scenario. Has a moderate impact on the conversation.
-* **After Chara:** World Info entry is inserted after the character's description and scenario. Has a greater impact on the conversation.
+* **角色定义前：** 世界信息条目插入在角色描述和场景之前。对对话的影响适中。
+* **角色定义后：** 世界信息条目插入在角色描述和场景之后。对对话有较大影响。
 
-#### Comment
+#### 注释
 
-A supplemental text comment for your convenience, which is not utilized by the AI.
+为了便利而添加的文本注释，该内容不会发送给AI。
 
-#### Constant
+#### 常数
 
-If enabled, the entry would always be present in the prompt.
+如果启用，该条目将始终出现在提示词中。
 
 #### Selective
 
-If enabled, the entry would only be inserted when both a Key **AND** a Secondary Key have been activated.
+如果启用，只有同时激活关键字**和**次要关键字时，才会插入条目。
 
-If no secondary keys are provided, this flag is ignored.
+如果没有提供次要关键字，该配置将被忽略。
 
-### Scan Depth
+### 搜索深度
 
-Defines how many messages in the chat history should be scanned for World Info keys.
+定义搜索聊天记录中多少条消息来查找世界信息关键字。
 
-If set to 1, then SillyTavern only scans the message you send and the most recent reply.
+如果设置为 1，那么 SillyTavern 只扫描你发送的消息和最近的回复。
 
-This stacks up to 10 message pairs in total.
+最多叠加到 10 组消息。
 
 ### Budget
 
