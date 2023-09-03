@@ -84,7 +84,7 @@ SillyTavern 可以连接多种大语言模型（LLM）API。
 ### Mancer AI
 
 - 托管无限制模型的服务，无需越狱。
-- 使用“点数”支付各种模型的词元。每天可以获得免费的点数。
+- 使用“点数”支付各种模型的 Token。每天可以获得免费的点数。
 - 默认情况下不记录提示词，但你可以启用它来获得点数折扣。
 - 使用类似于"Oobabooga TextGeneration WebUI "的 API，详见 [Mancer文档](https://mancer.tech/docs/clients/#sampling-parameters)。
 - [网站](https://mancer.tech/), [SillyTavern 设置指南](https://mancer.tech/docs/clients/sillytavern/)
