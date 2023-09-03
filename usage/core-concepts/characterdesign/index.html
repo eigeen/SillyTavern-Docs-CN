@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746731772279">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.3.0.747027496475">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.2.0">
+    <meta name="generator" content="Retype 3.3.0">
 
     <!-- Primary Meta Tags -->
     <title>角色设计 | SillyTavern 中文文档</title>
@@ -30,11 +30,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.2.0.746731772279" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.3.0.747027496475" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746731772279" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746731772279" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.3.0.747027496475" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.3.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.3.0.747027496475" data-turbo-eval="false" defer></script>
 
     <Style>
         a {
@@ -193,7 +193,6 @@
                             <div class="docs-markdown" id="docs-content">
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
-                
                                 <!-- Page content  -->
 <doc-anchor-target id="角色设计" class="break-words">
     <h1>
@@ -209,7 +208,7 @@
 </doc-anchor-target>
 <p>用于添加角色描述和AI需要知道的其他信息。此内容将始终出现在提示词中，因此所有重要的内容都应该在这里交代。</p>
 <p>例如，您可以添加有关事件发生的世界的信息，并描述该角色的特征。</p>
-<p>角色描述的长度不限（无论200或2000个词元），格式不限（自由文本、W++、对话格式等）。</p>
+<p>角色描述的长度不限（无论200或2000个 Token），格式不限（自由文本、W++、对话格式等）。</p>
 <doc-anchor-target id="方法和格式">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#方法和格式">#</doc-anchor-trigger>
@@ -223,29 +222,29 @@
 <li>kingbri&#x27;s minimalistic guide: <a href="https://rentry.co/kingbri-chara-guide">https://rentry.co/kingbri-chara-guide</a></li>
 <li>Kuma&#x27;s W++ guide: <a href="https://rentry.co/WPP_For_Dummies">https://rentry.co/WPP_For_Dummies</a></li>
 </ul>
-<doc-anchor-target id="角色词元">
+<doc-anchor-target id="角色-token">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#角色词元">#</doc-anchor-trigger>
-        <span>角色词元</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#角色-token">#</doc-anchor-trigger>
+        <span>角色 Token</span>
     </h3>
 </doc-anchor-target>
-<p><strong>假设你使用的AI模型限制上下文最多输入 2048 个词元（Token），如果你设定的角色设定包含了 1000 个词元，就相当于将AI的“记忆”削减了一半。</strong></p>
-<p>从这个角度来看，一个表现优秀的AI做出一个像样的回复很容易就会占用 200-300 个词元。在这种情况下，AI只能“记住”大约 3 次对话记录。</p>
+<p><strong>假设你使用的AI模型限制上下文最多输入 2048 个 Token（Token），如果你设定的角色设定包含了 1000 个 Token，就相当于将AI的“记忆”削减了一半。</strong></p>
+<p>从这个角度来看，一个表现优秀的AI做出一个像样的回复很容易就会占用 200-300 个 Token。在这种情况下，AI只能“记住”大约 3 次对话记录。</p>
 <hr>
-<doc-anchor-target id="为什么我的角色词元计数器变成红色了">
+<doc-anchor-target id="为什么我的角色-token-计数器变成红色了">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#为什么我的角色词元计数器变成红色了">#</doc-anchor-trigger>
-        <span>为什么我的角色词元计数器变成红色了？</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#为什么我的角色-token-计数器变成红色了">#</doc-anchor-trigger>
+        <span>为什么我的角色 Token 计数器变成红色了？</span>
     </h3>
 </doc-anchor-target>
-<p>当程序发现你的角色设定的词元长度大于模型定义的上下文长度的一半时，程序就会将计数器标红，因为这会降低AI对话的体验。</p>
-<doc-anchor-target id="如果我的角色词元过大会怎么样">
+<p>当程序发现你的角色设定的 Token 长度大于模型定义的上下文长度的一半时，程序就会将计数器标红，因为这会降低AI对话的体验。</p>
+<doc-anchor-target id="如果我的角色-token-过大会怎么样">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#如果我的角色词元过大会怎么样">#</doc-anchor-trigger>
-        <span>如果我的角色词元过大会怎么样？</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#如果我的角色-token-过大会怎么样">#</doc-anchor-trigger>
+        <span>如果我的角色 Token 过大会怎么样？</span>
     </h3>
 </doc-anchor-target>
-<p>首先别慌，这不会造成破坏性问题。在最坏的情况下，如果角色的永久词元过大，只是表示上下文中留给其他事情的空间减少了（见下文）。</p>
+<p>首先别慌，这不会造成破坏性问题。在最坏的情况下，如果角色的永久 Token 过大，只是表示上下文中留给其他事情的空间减少了（见下文）。</p>
 <p>这样做唯一的负面影响就是AI的“记忆”会减少，因为它可以处理的对话记录会减少。</p>
 <p>这是因为每个AI模型一次能处理的上下文数量都是有限的。</p>
 <doc-anchor-target id="上下文context">
@@ -262,11 +261,11 @@
 <li>特殊格式化字符串</li>
 <li>[括号命令]</li>
 </ul>
-<p>在向AI模型发送信息之前，SillyTavern 会自动计算分配可用上下文词元的最佳方式。</p>
-<doc-anchor-target id="角色的永久词元是什么">
+<p>在向AI模型发送信息之前，SillyTavern 会自动计算分配可用上下文 Token 的最佳方式。</p>
+<doc-anchor-target id="角色的永久-token-是什么">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#角色的永久词元是什么">#</doc-anchor-trigger>
-        <span>角色的永久词元是什么？</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#角色的永久-token-是什么">#</doc-anchor-trigger>
+        <span>角色的永久 Token 是什么？</span>
     </h3>
 </doc-anchor-target>
 <p>每次生成请求都会向AI发送这些信息：</p>
@@ -286,10 +285,10 @@
 <li>第一条消息——只在对话开始时发送一次。</li>
 <li>对话示例——只保留到对话历史填满上下文（可选择强制保留在上下文中）</li>
 </ul>
-<doc-anchor-target id="常用的ai模型上下文词元限制">
+<doc-anchor-target id="常用的ai模型上下文-token-限制">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#常用的ai模型上下文词元限制">#</doc-anchor-trigger>
-        <span>常用的AI模型上下文词元限制</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#常用的ai模型上下文-token-限制">#</doc-anchor-trigger>
+        <span>常用的AI模型上下文 Token 限制</span>
     </h3>
 </doc-anchor-target>
 <ul>

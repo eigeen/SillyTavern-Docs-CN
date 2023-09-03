@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.2.0.746731772279">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.3.0.747027496475">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.2.0">
+    <meta name="generator" content="Retype 3.3.0">
 
     <!-- Primary Meta Tags -->
-    <title>世界信息 (World Info) | SillyTavern 中文文档</title>
-    <meta name="title" content="世界信息 (World Info) | SillyTavern 中文文档">
+    <title>世界信息 | SillyTavern 中文文档</title>
+    <meta name="title" content="世界信息 | SillyTavern 中文文档">
     <meta name="description" content="世界信息（又称 Lorebooks 或 Memory Books）可增强AI对世界细节的理解。">
 
     <!-- Canonical -->
@@ -19,22 +19,22 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.eigeen.cc/usage/core-concepts/worldinfo/">
-    <meta property="og:title" content="世界信息 (World Info) | SillyTavern 中文文档">
+    <meta property="og:title" content="世界信息 | SillyTavern 中文文档">
     <meta property="og:description" content="世界信息（又称 Lorebooks 或 Memory Books）可增强AI对世界细节的理解。">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://docs.eigeen.cc/usage/core-concepts/worldinfo/">
-    <meta property="twitter:title" content="世界信息 (World Info) | SillyTavern 中文文档">
+    <meta property="twitter:title" content="世界信息 | SillyTavern 中文文档">
     <meta property="twitter:description" content="世界信息（又称 Lorebooks 或 Memory Books）可增强AI对世界细节的理解。">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.2.0.746731772279" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.3.0.747027496475" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.2.0.746731772279" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.2.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.2.0.746731772279" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.3.0.747027496475" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.3.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.3.0.747027496475" data-turbo-eval="false" defer></script>
 
     <Style>
         a {
@@ -193,12 +193,11 @@
                             <div class="docs-markdown" id="docs-content">
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
-                
                                 <!-- Page content  -->
-<doc-anchor-target id="世界信息-world-info" class="break-words">
+<doc-anchor-target id="世界信息" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#世界信息-world-info">#</doc-anchor-trigger>
-        <span>世界信息 (World Info)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#世界信息">#</doc-anchor-trigger>
+        <span>世界信息</span>
     </h1>
 </doc-anchor-target>
 <p><strong>世界信息（又称 Lorebooks 或 Memory Books）可增强AI对世界细节的理解。</strong></p>
@@ -214,7 +213,7 @@
 <ul>
 <li>AI 不会在上下文中插入触发关键词，因此每个世界信息条目都应是全面、独立的描述。</li>
 <li>为了创建丰富详尽的世界传说（world lore），条目之间可以相互链接和参考。</li>
-<li>为了节约词元，条目内容最好简洁明了，一般建议每个条目不超过 50 个词元。</li>
+<li>为了节约 Token，条目内容最好简洁明了，一般建议每个条目不超过 50 个 Token。</li>
 </ul>
 <doc-anchor-target id="角色-lore-character-lore">
     <h2>
@@ -244,14 +243,14 @@
         <span>角色 Lore 优先</span>
     </h4>
 </doc-anchor-target>
-<p>角色世界信息中的条目将首先包含在内。并根据插入顺序排序，然后再包含全球世界信息中的条目。</p>
+<p>角色世界信息中的条目将首先包含在内，并根据插入顺序排序。然后再包含全球世界信息中的条目。</p>
 <doc-anchor-target id="全局-lore-优先">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#全局-lore-优先">#</doc-anchor-trigger>
         <span>全局 Lore 优先</span>
     </h4>
 </doc-anchor-target>
-<p>全局世界信息中的条目将首先包含在内。并根据插入顺序排序，然后再包含角色世界信息中的条目。</p>
+<p>全局世界信息中的条目将首先包含在内，并根据插入顺序排序。然后再包含角色世界信息中的条目。</p>
 <doc-anchor-target id="世界信息条目">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#世界信息条目">#</doc-anchor-trigger>
@@ -303,10 +302,10 @@
     </h4>
 </doc-anchor-target>
 <p>为了便利而添加的文本注释，该内容不会发送给AI。</p>
-<doc-anchor-target id="常数">
+<doc-anchor-target id="常驻">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#常数">#</doc-anchor-trigger>
-        <span>常数</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#常驻">#</doc-anchor-trigger>
+        <span>常驻</span>
     </h4>
 </doc-anchor-target>
 <p>如果启用，该条目将始终出现在提示词中。</p>
@@ -318,61 +317,61 @@
 </doc-anchor-target>
 <p>如果启用，只有同时激活关键字<strong>和</strong>次要关键字时，才会插入条目。</p>
 <p>如果没有提供次要关键字，该配置将被忽略。</p>
-<doc-anchor-target id="搜索深度">
+<doc-anchor-target id="扫描深度">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#搜索深度">#</doc-anchor-trigger>
-        <span>搜索深度</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#扫描深度">#</doc-anchor-trigger>
+        <span>扫描深度</span>
     </h3>
 </doc-anchor-target>
-<p>定义搜索聊天记录中多少条消息来查找世界信息关键字。</p>
+<p>定义最多扫描聊天记录中多少条消息来查找世界信息关键字。</p>
 <p>如果设置为 1，那么 SillyTavern 只扫描你发送的消息和最近的回复。</p>
 <p>最多叠加到 10 组消息。</p>
-<doc-anchor-target id="budget">
+<doc-anchor-target id="token-预算">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#budget">#</doc-anchor-trigger>
-        <span>Budget</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#token-预算">#</doc-anchor-trigger>
+        <span>Token 预算</span>
     </h3>
 </doc-anchor-target>
-<p><strong>Defines how many tokens could be used by World Info entries at once.</strong></p>
-<p>If the budget was exhausted, then no more entries are activated even if the keys are present in the prompt.</p>
-<p>Constant entries will be inserted first. Then entries with higher order numbers.</p>
-<p>Entries inserted by direct mentioning their keys have higher priority than those that were mentioned in other entries&#x27; contents.</p>
-<doc-anchor-target id="recursive-scanning">
+<p><strong>定义世界信息条目一次可以使用多少 Token。</strong></p>
+<p>如果预算耗尽，即使提示词出现了关键字，也不会激活更多的条目。</p>
+<p>常驻项将首先插入。然后是高排序优先级的项。</p>
+<p>直接提及其关键字插入的条目比在其他条目内容中提到的条目具有更高的优先级。</p>
+<doc-anchor-target id="递归扫描">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#recursive-scanning">#</doc-anchor-trigger>
-        <span>Recursive scanning</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#递归扫描">#</doc-anchor-trigger>
+        <span>递归扫描</span>
     </h3>
 </doc-anchor-target>
-<p><strong>Entries can activate other entries by mentioning their keywords in the content text.</strong></p>
-<p>For example, if your World Info contains two entries:</p>
+<p><strong>条目可通过在条目内容中提及关键字来激活其他条目。</strong></p>
+<p>例如，如果你的世界信息包含两个条目：</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">Entry #1
-Keyword: Bessie
-Content: Bessie is a cow and is friends with Rufus.</code></pre>
+<pre class="language-none"><code v-pre class="language-none">条目 #1
+关键字: Bessie
+内容: Bessie is a cow and is friends with Rufus.</code></pre>
 </doc-codeblock></div>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">Entry #2
-Keyword: Rufus
-Content: Rufus is a dog.</code></pre>
+<pre class="language-none"><code v-pre class="language-none">条目 #2
+关键字: Rufus
+内容: Rufus is a dog.</code></pre>
 </doc-codeblock></div>
-<p><strong>Both</strong> of them will be pulled into the context if the message text mentions <strong>just Bessie</strong>.</p>
-<doc-anchor-target id="case-sensitive-keys">
+<p>如果消息文本只提到<strong>贝西</strong>，那么这两者<strong>都</strong>会被拉到上下文中。</p>
+<doc-anchor-target id="关键字区分大小写">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#case-sensitive-keys">#</doc-anchor-trigger>
-        <span>Case-sensitive keys</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#关键字区分大小写">#</doc-anchor-trigger>
+        <span>关键字区分大小写</span>
     </h3>
 </doc-anchor-target>
-<p><strong>To get pulled into the context, entry keys need to match the case as they are defined in the World Info entry.</strong></p>
-<p>This is useful when your keys are common words or parts of common words.</p>
-<p>For example, when this setting is active, keys &#x27;rose&#x27; and &#x27;Rose&#x27; will be treated differently, depending on the inputs.</p>
-<doc-anchor-target id="match-whole-words">
+<p><strong>要进入上下文，条目关键字需要与世界信息条目中定义的大小写相匹配。</strong></p>
+<p>当你的关键字是常用词或常用词的一部分时，这就很有用了。</p>
+<p>例如，启用此设置后，关键字“rose”和“Rose”将根据输入内容的不同进行不同的处理。</p>
+<doc-anchor-target id="匹配整个单词">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#match-whole-words">#</doc-anchor-trigger>
-        <span>Match whole words</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#匹配整个单词">#</doc-anchor-trigger>
+        <span>匹配整个单词</span>
     </h3>
 </doc-anchor-target>
-<p>Entries with keys containing only one word will be matched only if the entire word is present in the search text.</p>
-<p>For example, if the setting is enabled and the entry key is &quot;king&quot;, then text such as &quot;long live the king&quot; would be matched, but &quot;it&#x27;s not to my liking&quot; wouldn&#x27;t.</p>
+<p>只有在搜索文本中出现整个单词时，关键字只包含一个单词的条目才会被匹配。</p>
+<p>例如，如果启用了该设置，且条目关键字为“king”，那么“long live the king”之类的文本将被匹配，但“it&#x27;s not to my liking”则不会被匹配。</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -445,6 +444,6 @@ Content: Rufus is a dog.</code></pre>
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "世界信息 (World Info)", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "世界信息", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
