@@ -1,199 +1,204 @@
-# Smart Context
+# 智能上下文
 
-### What is it?
+### 这是什么？
 
-Smart Context is a SillyTavern extension that uses the [ChromaDB library](https://www.trychroma.com) to give your AI characters access to information that exists outside the normal chat history context limit.
+智能上下文是 SillyTavern 扩展，它使用 [ChromaDB 向量数据库](https://www.trychroma.com) 为您的 AI 角色聊天提供聊天历史上下文限制之外的历史信息。
 
-### How is that useful?
+### 这有什么用？
 
-If you have a very long chat, the majority of the contents are outside the usual context window and thus unavailable to the AI when it comes to writing a response.
+如果你有一个非常长的聊天记录，大部分聊天内容都在通常的 AI 模型上下文限制之外，因此当 AI 编写回复时这些聊天记录无法使用。
 
-Smart Context automatically takes the entire history of the chat file and puts it into a vector database. This database is then searched each time you input something new into the chat, and if messages with matching keywords are found, those chat messages are placed into the context so the AI can see them when writing its next reply.
+智能上下文自动将整个聊天文件的历史记录放入向量数据库中。每次您输入新聊天内容时会搜索向量数据库，如果找到具有匹配关键字的历史消息，则这些聊天消息将被放置到上下文中，以便 AI 在编写其下一个回复时可以看到它们。
 
 ***
 
-### Setup Instructions
+### 设置说明
 
-1. Update SillyTavern to at least main branch version 1.6.0.
-2. Install or Update [Extras](https://github.com/SillyTavern/SillyTavern-extras) to the latest version.
-3. Install requirements-complete.txt for Extras (even if you did it once before in a prior install).
-4. run Extras with the chromadb module enabled: `python server.py --enable-modules=chromadb`
+1. 将 SillyTavern 版本升级至 1.6.0 或以上。
+2. 安装或升级 [Extras](https://github.com/SillyTavern/SillyTavern-extras) 到最新版本。
+3. 使用 Pip 安装 Extras 的 requirements-complete.txt (即使您在以前的安装中做过一次)。
+4. 运行 Extras 并启用 chromadb 向量数据库模块: `python server.py --enable-modules=chromadb`
 
-#### Getting an error when installing ChromaDB?
+#### 安装ChromaDB时出错？
 
 ```
 ERROR: Could not build wheels for hnswlib, which is required to install pyproject.toml-based projects
 ```
 
-Installing chromadb package requires one of the following:
+安装chromadb封装需要以下之一：
 
 - Have Visual C++ build tools installed: <https://visualstudio.microsoft.com/visual-cpp-build-tools/>
 - Installing hnswlib from conda: `conda install -c conda-forge hnswlib`
 
 ***
 
-### Configuration
+### 设置
 
-Once Smart Context is enabled, you should configure it in the SillyTavern UI.
-Smart Context configuration can be done from within the Extensions menu ![STExtensionMenuIcon](https://github.com/SillyTavern/SillyTavern/assets/124905043/4545037e-dff8-4373-9513-cddb69780be1)
+启用智能上下文后，您应该在 SillyTavern 中进行配置。
+智能上下文配置可以在扩展菜单中完成。 ![STExtensionMenuIcon](https://github.com/SillyTavern/SillyTavern/assets/124905043/4545037e-dff8-4373-9513-cddb69780be1)
 
 ![Smart Context Config Panel](https://files.catbox.moe/32qexu.png)
 
-There are 4 main concepts to be aware of:
+有 4 个主要概念需要注意：
 
-- Chat History Preservation
-- Memory Injection Amount
-- Individual Memory Length
-- Injection Strategy
-
-***
-
-#### SmartContext only starts after 10 mesages are in the chat history
-
-- At the start of a new chat, ChromaDB is inactive.
-- Once the chat has accumulated 10 messages, it will begin recording all messages into the database, and recalling messages as needed.
-
-#### Chat History Preservation ('kept mesages')
-
-By default, ChromaDB will keep as many recent natural chat history messages as specified in the slider.
-Any messages beyond this amount will be removed from your sent prompt, and if 'memories' exist in the database they will be added in place of the older chat history messages (see Strategy below).
+- 聊天记录保存
+- 内存注入量
+- 单个内存长度
+- 注入策略
 
 ***
 
-#### Memory Injection Amount
+#### 智能上下文只有在聊天记录中有 10 条消息后才会启动。
 
-The maximum number of 'memories' Smart Context will insert into the context.
-Not every injection attempt will get this full amount.
-If you send an input related to 'dogs' and only one other message in the DB is related to dogs, then only 1 item will be inserted.
+- 在新聊天开始时，ChromaDB 处于非活动状态。
+- 一旦聊天累积了 10 条消息，它将开始记录所有消息到数据库中，并在需要时回忆这些消息。
+
+#### 聊天记录保存 ('保留的消息')
+
+默认情况下，ChromaDB 将保留设置中指定的最近聊天历史消息数量。
+超出此数量的任何消息都将从您发送的提示中删除，如果数据库中存在“记忆”，则它们将替换旧的聊天历史记录消息（请参见下面的策略）。
 
 ***
 
-#### Individual Memory Length
+#### 内存注入量
 
-This is the maximum length allowed for each injected 'memory'.
-This is in **CHARACTERS** (not tokens).
-If set too small, the memory could be cut off midway.
+智能上下文将插入到聊天消息中的'记忆'最大数量。
+并非每次插入尝试都会得到这个完整的数量。
+如果您发送“狗”相关的消息，并且数据库中只有另一条消息与狗有关，则只会插入1个项目。
 
-Example:
+***
+
+#### 个人记忆长度
+
+这是每个注入的'记忆'允许的最大长度。
+这是以**字符**为单位（而不是 Tokens）。
+如果设置得太小，可能会被截断。
+
+例如:
 
 `Ross: I like dogs with long fur and fluffy tails. I dislike dogs with short fur and short tails.`
 
-This database 'memory' is 103 characters long, so you would need to set the slider to at least `103` in order to pull it entirely into the context.
-
-If the slider is less than 103, the message would be cut off and injected like that.
-
-***
-
-### Injection Strategy
-
-#### Replace oldest history
-
-This strategy keeps X recent messages, removes all message before that, and replaces them with 'memories'.
-
-Advantage
-
-- less likely to overflow your context limit
-- memories existing near the top of the context will have less immediate impact on the response while still providing 'background information'.
-
-Disadvantage
-
-- old messages are inserted directly into the chat history with no special demarcation, and usually have no immediate natural relevance to the preserved natural chat history messages. This can confuse less intelligent AI models.
-
-#### Add to Bottom
-
-This strategy leaves the chat history in its natural state and adds 'memories' **after** it inside a formatted [bracket header].
-This means the 'kept messages' sliders is effectively disabled.
-
-Advantage
-
-- does not shorten or alter the current natural chat history
-- 'memories' exist after chat and have a stronger impact on the next AI response
-
-Disadvantage
-
-- because no chat items are being removed/replaced, there is a higher chance you will overflow your context limit.
-- because the memories exist very close to the end of the prompt they can have TOO MUCH effect on the AI's response.
-
-#### Custom Depth
-
-This strategy leaves the chat history in its natural state and adds 'memories' at the depth you determine within the template you specify.
-This means the 'kept messages' slider is effectively disabled.
-The custom injection message should include the `{{memories}}` template word which is where all queried memories will be placed.
-
-Advantage
-
-- flexibility to experiment with memory placement 
-- customizable introductions to memory within context
-
-Disadvantage
-
-- because no chat items are being removed/replaced, there is a higher chance you will overflow your context limit.
-
-
-#### Use % Strategy
-
-Note: This is not compatible with the 'Add to Bottom' strategy, which does not remove any messages at all.
-
-While using the 'Replace Oldest History' strategy, checking this box will enable the slider for selecting a percentage of the in-context chat history to replace with SmartContext memories. It will also disable the two sliders for manually selecting the number of messages.
-
-This strategy automatically calculates a percentage of the chat history to be replaced with SmartContext memories, instead of a fixed number of messages.
-
-Advantage
-
-- easier than manually calculating the number of messages yourself
-- adjusts with the available context size, applying the same percentage to small and large prompt spaces
-
-Disadvantage
-
-- calculations for how much history to remove can be slightly innacurate as they are based on estimated tokens per message
-- it rounds the number of messages to remove to the nearest number divisible by 5 (0, 5, 10, 15, 20, etc), so it is not as fine grained as manual numeric selection.
+此数据库'内存'长度为103个字符，因此您需要至少设置为'103'，才能将其完全加入上下文。
+如果滑块小于103，则消息将被截断并插入。
 
 ***
 
-### Memory Recall Strategy
+### 插入策略
 
-#### Recall only from this chat
+#### 替换最老的历史记录
 
-This is the default behavior of smart-context and pulls 'memories' only from the ChromaDB collection for this specific chat.
+这个策略保留了最近的 X 条消息，删除之前的所有消息，并用'记忆'替换它们。
 
-#### Recall from all character chats
+优点
 
-This is an experimental behavior of smart-context which pulls 'memories' from all ChromaDB collections for the selected character.
-Hypothetically this should allow for the development of a more robust memory set spanning many interactions. 
-Reccomended that this be used with 'Add to Bottom' or 'Custom Depth' strategies and 'kept messages' set to a low number so that ChromaDB will pull from memory sooner.
+- 不太可能超出上下文限制
+- 存在于上下文顶部附近的记忆将减少对响应的直接影响，同时仍然提供'背景信息'。
 
-### Using Smart Context
+缺点
 
-Once it is enabled and configured, Smart Context happens automatically.
+- 旧消息直接插入到聊天记录中，没有特殊的标记，并且通常与保存的自然聊天历史消息没有直接关联，这可能会让较不智能的AI模型感到困惑。
 
-ChromaDB makes a new database for each chat that is opened inside SillyTavern.
-This database is automatically filled with the entire chat history.
+#### 添加到底部
 
-You can also manually insert text files into the database.
+这种策略保留了聊天记录的自然状态，并在格式化的[括号标题]内部添加'记忆'。
 
-These text files do not have to be chats. They can be anything (wikipedia entries, fanfic, etc).
+这意味着'保留消息'设置被禁用。
 
-#### Purging the Database
+优点
 
-You can use the 'Purge DB' button to clear the database for the current chat.
+- 不缩短或更改当前自然的聊天历史记录
+- '记忆'存在于聊天之后，并对下一个AI响应产生更强的影响。
 
-This can be helpful if you find inaccurate memories have been stored (such as chat message you have since deleted or edited).
+缺点
+
+- 因为没有聊天项目被移除/替换，所以你溢出上下文限制的可能性更高。
+- 因为这些记忆非常接近提示的结尾，它们对AI的响应会产生太大影响。
+
+#### 自定义深度
+
+这种策略保留了聊天记录的自然状态，并在您指定的模板中确定深度添加'记忆'。
+
+这意味着'保留消息'设置被禁用。
+
+自定义注入消息应包括 `{{memories}}` 模板词，所有查询到的回忆都将放置在此处。
+
+优点
+
+- 灵活性以进行内存放置实验
+- 在上下文中自定义介绍内存
+
+缺点
+
+- 由于没有删除/替换任何聊天项目，您的上下文限制可能会更容易超出。
+
+
+#### 使用策略
+
+注意：这与“添加到底部”策略不兼容，该策略根本不会删除任何消息。
+
+在使用'替换最旧的历史记录'策略时，勾选此框将启用滑块以选择要替换为智能上下文记忆的上下文聊天历史记录的百分比。它还将禁用手动选择消息数量的两个滑块。
+
+该策略自动计算要替换为智能上下文记忆的聊天历史记录百分比，而不是固定数量的消息。
+
+优点
+
+- 比手动计算消息数量更容易
+- 根据可用的上下文大小进行调整，将相同的百分比应用于小型和大型提示空间
+
+缺点
+
+- 删除多少历史记录的计算可能会有些不准确，因为它们基于每条消息的估计令牌数。
+- 它将要删除的消息数量四舍五入到最接近 5（0、5、10、15、20等）的数字，因此它不像手动数字选择那样细粒度。
+
+***
+
+### 记忆召回策略
+
+#### 仅从此聊天中回忆
+
+这是智能上下文的默认行为，并仅从 ChromaDB 集合中提取'记忆'以供此特定聊天使用。
+
+#### 从所有角色聊天中回忆起。
+
+这是智能上下文的实验性行为，它从所选角色的所有 ChromaDB 集合中提取“记忆”。
+
+假设这应该允许开发一个更强大的记忆集，跨越许多互动。
+
+建议使用'添加到底部'或'自定义深度'策略，并将'保留消息'的数量设置为较低值，以便 ChromaDB 尽早从内存中提取。
+
+### 使用智能上下文。
+
+一旦启用并配置好，智能上下文将自动运行。
+
+ChromaDB 为 SillyTavern 中打开的每个聊天创建一个新数据库。
+
+该数据库会自动填充整个聊天历史记录。
+
+您还可以手动将文本文件插入到数据库中。
+
+这些文本文件不必是聊天记录。它们可以是任何东西（维基百科条目、同人小说等）。
+
+#### 清除数据库
+
+你可以使用 '清除数据库' 按钮来清除当前聊天的数据库。
+
+如果您发现存储了不准确的记忆（例如您已经删除或编辑过的聊天消息），这将会很有帮助。
 
 ***
 
 ### FAQ
 
-#### What happens to the databases when I'm done chatting? Can I save them?
+#### 当我聊天结束后，数据库会发生什么？我可以保存它们吗？
 
-For locally installed Extras servers, Smart Context saves the databases. There is no need to save them manually in usual use cases.
+对于本地安装的 Extras 服务器，智能上下文会保存数据库。在通常的使用情况下，没有必要手动保存它们。
 
-For colab users, the databases are wiped when the extras server shuts down. Use the export button to save the database as a JSON file, and import it next time you want to use it.
+对于 Colab 用户，在 Extras 服务关闭时，数据库将被清除。使用导出按钮将数据库保存为 JSON 文件，并在下次想要使用它时进行导入。
 
-**Usually there is no need to save Smart Context databases.**
+**通常情况下，不需要保存智能上下文数据库。**
 
-Currently we have an Import/Export feature, which allows you to save the chat's DB and use it again at a later date.
+目前我们有一个导入/导出功能，可以让您保存聊天的数据库并在以后再次使用。
 
-#### Can I make one big database for all of my chats to reference?
+#### 我可以建立一个大数据库，用于参考所有我的聊天记录吗？
 
-This would not be a good use of Smart Context's capabilities.
-We recommend using World Info for this purpose.
+这不是智能上下文能力的好用途。
+我们建议使用 World Info 来实现此目的。
